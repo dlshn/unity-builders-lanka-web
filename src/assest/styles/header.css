@@ -1,0 +1,86 @@
+/* ---------- Header Styles ---------- */
+.custom-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 8px 0;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    background: transparent; /* Transparent initially */
+    
+  }
+  
+  /* Add blurred background when scrolled */
+  .custom-header.scrolled {
+    background: rgba(255, 255, 255, 0.1); /* Light transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  }
+  
+  /* Logo */
+  .logo-img {
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    padding: 5px;
+  }
+  
+  
+  /* Navigation Links */
+  .nav-links {
+    display: none;  
+  }
+  
+  /* Show menu when active  */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    background: rgb(116, 116, 116);
+    border-radius: 0px;
+    padding: 15px;
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #072b7e;
+  }
+  
+  /* Desktop Menu */
+  @media (min-width: 992px) {
+    .nav-links {
+      display: flex !important;
+      gap: 35px;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+    .nav-links a:hover {
+      color: hsl(197, 100%, 28%);
+    }
+  } 
+  /* menu icon */
+  .menu-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2rem; /* Adjust size */
+    color: white; /* Default color */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  
