@@ -1,0 +1,102 @@
+/* ---------- Projects Section ---------- */
+.projects-section {
+    height: auto; /* Ensures auto height based on content */
+    padding: 60px 20px;
+    background: url("../about-bg\ \(1\).jpg") center/cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background in place while scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps content centered */
+    justify-content: center;
+  }
+  
+  /* Project Box */
+  .project-box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Image Wrapper */
+  .img-wrapper {
+    position: relative;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-box:hover .project-img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .project-box:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Contact Us Button */
+  .project-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    background: linear-gradient(45deg, #003e8a, #005bb5);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .project-btn:hover {
+    background: white;
+    color: #003e8a;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .projects-section {
+      padding: 40px 10px;
+    }
+    
+    .overlay {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay {
+      font-size: 1rem;
+    }
+    
+    .project-btn {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+  }
+  
