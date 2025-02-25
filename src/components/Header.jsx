@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assest/styles/header.css";
+import logo from "../assest/logo.png";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ export const Header = () => {
       <nav className="navbar container d-flex justify-content-between align-items-center py-2">
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/logo.png" alt="Unity Builders Lanka" className="logo-img" />
+          <img src={logo} alt="Unity Builders Lanka" className="logo-img" />
         </Link>
 
         {/* Mobile Menu Icon */}

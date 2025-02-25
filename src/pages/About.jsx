@@ -12,7 +12,7 @@ export const About = () => {
       <div className="container">
         <div className="row align-items-center about-container">
           
-          {/* Left Side - Image */}
+          {/* Left Side - Image  */}
           <div className="col-lg-6 text-center left-box">
             <div className="image-wrapper">
               <img src={image_left} alt="Team Collaboration" className="img-fluid" />
@@ -38,8 +38,8 @@ export const About = () => {
             <p className="about-text">
             We specialize in efficient home construction, offering competitive pricing, excellent customer service, and timely project completion, with projects completed in as little as six months.
             </p>
+            <h3 className="text-align-center text-light service-title">Services</h3>
             <div className="text-light service-list">
-              <h3 className="text-align-center service-title">Services</h3>
               <ul>
                 <li>Architectural Design Services</li>
                 <li>2D and 3D Designs</li>

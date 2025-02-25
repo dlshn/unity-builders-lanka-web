@@ -10,7 +10,7 @@ export const Project = () => {
       <Heading title="Ongoing Projects" />
       <div className="container">  
 
-        {/* Bootstrap Grid */}
+        {/* Bootstrap Grid  */}
         <div className="row g-4">
           {projectData.map((item) => (
             <div key={item.id} className="col-lg-4 col-md-6 col-sm-12">
