@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/unity-builders-lanka-web/static/css/main.b270f744.css",
-    "main.js": "/unity-builders-lanka-web/static/js/main.b32342fc.js",
+    "main.js": "/unity-builders-lanka-web/static/js/main.ea21cee8.js",
     "static/js/453.227bbaba.chunk.js": "/unity-builders-lanka-web/static/js/453.227bbaba.chunk.js",
     "static/media/hero-bg6.jpg": "/unity-builders-lanka-web/static/media/hero-bg6.098d5212ed3b65ee1d60.jpg",
     "static/media/about-bg (1).jpg": "/unity-builders-lanka-web/static/media/about-bg (1).3535152ca043756251d4.jpg",
@@ -12,13 +12,14 @@
     "static/media/117.jpg": "/unity-builders-lanka-web/static/media/117.84570922f9b8cb59f022.jpg",
     "static/media/92.jpg": "/unity-builders-lanka-web/static/media/92.f722028e6169855d1249.jpg",
     "static/media/88.jpg": "/unity-builders-lanka-web/static/media/88.0c7d73e35330d84899b3.jpg",
+    "static/media/logo.png": "/unity-builders-lanka-web/static/media/logo.355e6d779dc5d11ee153.png",
     "index.html": "/unity-builders-lanka-web/index.html",
     "main.b270f744.css.map": "/unity-builders-lanka-web/static/css/main.b270f744.css.map",
-    "main.b32342fc.js.map": "/unity-builders-lanka-web/static/js/main.b32342fc.js.map",
+    "main.ea21cee8.js.map": "/unity-builders-lanka-web/static/js/main.ea21cee8.js.map",
     "453.227bbaba.chunk.js.map": "/unity-builders-lanka-web/static/js/453.227bbaba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b270f744.css",
-    "static/js/main.b32342fc.js"
+    "static/js/main.ea21cee8.js"
   ]
 }
