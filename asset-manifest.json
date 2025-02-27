@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/unity-builders-lanka-web/static/css/main.ef82df2e.css",
-    "main.js": "/unity-builders-lanka-web/static/js/main.2b3e8abc.js",
-    "static/js/453.227bbaba.chunk.js": "/unity-builders-lanka-web/static/js/453.227bbaba.chunk.js",
-    "static/media/hero-bg6.jpg": "/unity-builders-lanka-web/static/media/hero-bg6.098d5212ed3b65ee1d60.jpg",
-    "static/media/about-bg (1).jpg": "/unity-builders-lanka-web/static/media/about-bg (1).3535152ca043756251d4.jpg",
-    "static/media/hero-bg5.jpg": "/unity-builders-lanka-web/static/media/hero-bg5.234a95265b5119d9fb06.jpg",
-    "static/media/about-left.jpg": "/unity-builders-lanka-web/static/media/about-left.5e3c2521785c86618e03.jpg",
-    "static/media/miriswatta.jpg": "/unity-builders-lanka-web/static/media/miriswatta.eae659e5b5c8e89be3e8.jpg",
-    "static/media/wattala.jpg": "/unity-builders-lanka-web/static/media/wattala.534582f210257fbcdd83.jpg",
-    "static/media/about-bg (4).jpg": "/unity-builders-lanka-web/static/media/about-bg (4).7754f1832d542345cd13.jpg",
-    "static/media/about-bg (3).jpg": "/unity-builders-lanka-web/static/media/about-bg (3).44a653b53d669bf04a06.jpg",
-    "static/media/kelaniya.jpg": "/unity-builders-lanka-web/static/media/kelaniya.e9e6b916ed9247eef7f8.jpg",
-    "static/media/117.jpg": "/unity-builders-lanka-web/static/media/117.84570922f9b8cb59f022.jpg",
-    "static/media/92.jpg": "/unity-builders-lanka-web/static/media/92.f722028e6169855d1249.jpg",
-    "static/media/88.jpg": "/unity-builders-lanka-web/static/media/88.0c7d73e35330d84899b3.jpg",
-    "static/media/logo.png": "/unity-builders-lanka-web/static/media/logo.355e6d779dc5d11ee153.png",
-    "index.html": "/unity-builders-lanka-web/index.html",
-    "main.ef82df2e.css.map": "/unity-builders-lanka-web/static/css/main.ef82df2e.css.map",
-    "main.2b3e8abc.js.map": "/unity-builders-lanka-web/static/js/main.2b3e8abc.js.map",
-    "453.227bbaba.chunk.js.map": "/unity-builders-lanka-web/static/js/453.227bbaba.chunk.js.map"
+    "main.css": "/static/css/main.3b648547.css",
+    "main.js": "/static/js/main.d59982ac.js",
+    "static/js/453.227bbaba.chunk.js": "/static/js/453.227bbaba.chunk.js",
+    "static/media/hero-bg6.jpg": "/static/media/hero-bg6.098d5212ed3b65ee1d60.jpg",
+    "static/media/about-bg (1).jpg": "/static/media/about-bg (1).3535152ca043756251d4.jpg",
+    "static/media/hero-bg5.jpg": "/static/media/hero-bg5.234a95265b5119d9fb06.jpg",
+    "static/media/about-left.jpg": "/static/media/about-left.5e3c2521785c86618e03.jpg",
+    "static/media/miriswatta.jpg": "/static/media/miriswatta.eae659e5b5c8e89be3e8.jpg",
+    "static/media/wattala.jpg": "/static/media/wattala.534582f210257fbcdd83.jpg",
+    "static/media/about-bg (4).jpg": "/static/media/about-bg (4).7754f1832d542345cd13.jpg",
+    "static/media/about-bg (3).jpg": "/static/media/about-bg (3).44a653b53d669bf04a06.jpg",
+    "static/media/kelaniya.jpg": "/static/media/kelaniya.e9e6b916ed9247eef7f8.jpg",
+    "static/media/117.jpg": "/static/media/117.84570922f9b8cb59f022.jpg",
+    "static/media/92.jpg": "/static/media/92.f722028e6169855d1249.jpg",
+    "static/media/88.jpg": "/static/media/88.0c7d73e35330d84899b3.jpg",
+    "static/media/logo.png": "/static/media/logo.355e6d779dc5d11ee153.png",
+    "index.html": "/index.html",
+    "main.3b648547.css.map": "/static/css/main.3b648547.css.map",
+    "main.d59982ac.js.map": "/static/js/main.d59982ac.js.map",
+    "453.227bbaba.chunk.js.map": "/static/js/453.227bbaba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef82df2e.css",
-    "static/js/main.2b3e8abc.js"
+    "static/css/main.3b648547.css",
+    "static/js/main.d59982ac.js"
   ]
 }
