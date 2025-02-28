@@ -6,7 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 80px 20px 60px 20px;
+    
+
   }
   
   /* Glass effect container */
@@ -17,8 +19,10 @@
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
     
   }
+  
   
   /* Image Styling */
   .image-wrapper img {
@@ -32,22 +36,49 @@
     opacity: 0.9;
   }
   
+  .right-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
   .about-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
   .about-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 10px;
+  }
+
+  .bottom-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
   }
   
   .service-title{
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 10px;
   }
+  .service-list{
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    font-weight: bold;
+    }
   
   .custom-btn {
     padding: 12px 25px;
@@ -74,14 +105,12 @@
       flex-direction: column;
     }
   
-    .about-title {
-      font-size: 2rem;
-    }
   
     .custom-btn {
       padding: 10px 20px;
       font-size: 0.9rem;
     }
+    
     .service-list{
       display: flex;
       flex-direction: column;
@@ -92,32 +121,49 @@
   @media (max-width: 600px) {
     .about-us-section {
         height: auto;
-        padding: 20px 10px;
+        padding: 80px 10px;
       }
 
     .about-container {
-    border-radius: 12px;
-    padding: 10px;
+      border-radius: 12px;
+      padding: 10px;
     }
     .about-title {
       font-size: 1.8rem;
-      height: 60px;
-      padding-bottom: 40px;
+      height: 40px;
+      padding-bottom: 20px;
       padding-top: 0;
     }
-  
     .about-text {
       font-size: 0.95rem;
     }
+
+    .bottom-box{
+      padding: 0;
+      
+    }
+    .service-title{
+      font-size: 1.8rem;
+    }
+  
+    
     .service-list{
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-weight: normal;
+    font-size: 0.95rem;
     }
   
     .custom-btn {
       font-size: 0.85rem;
       padding: 8px 18px;
+    }
+  }
+
+  @media (max-width: 371px){
+    .about-title{
+      height: 60px;
     }
   }
   

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaPhoneSquareAlt, FaEnvelope, FaFacebook } from "react-icons/fa";
-import { MdOutlinePhonelinkRing } from "react-icons/md";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { AiOutlineGlobal } from "react-icons/ai";
 import L from "leaflet";

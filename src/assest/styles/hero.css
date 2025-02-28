@@ -22,6 +22,20 @@
     z-index: -1;
   }
   
+  .hero-logo{
+    height: 120px;
+    border-radius: 100%;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid rgb(95, 95, 95);
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .hero-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
   
   .hero-heading {
     font-size: 60px;
@@ -48,8 +62,8 @@
     border-radius: 30px;
     text-decoration: none;
     font-size: 18px;
-    transition: 0.3s;
     color: #fff;
+    display: inline-block;
   }
   
   .hero-btn:hover {
@@ -61,12 +75,12 @@
   @media (max-width: 768px) {
     .hero-heading {
       font-size: 40px;
-      height: 140px;
+      height: 60px;
       margin-bottom: 20px;
     }
   
     .subheading {
-      font-size: 24px;
+      font-size: 30px;
     }
   
     .hero-description {
@@ -74,5 +88,45 @@
     
   }
   
+}
+@media (max-width: 548px){
+  .hero-heading{
+    height: 80px;
+  }
+}
+@media (max-width: 480px){
+    .hero-logo{
+      height: 100px;
+    }
+    .hero-heading {
+      font-size: 40px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  
+    .subheading {
+      font-size: 20px;
+    }
+  
+    .hero-description {
+      font-size: 14px;
+    
+  }
+  .hero-btn{
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+}
+
+@media (max-width: 378px){
+  .hero-logo{
+    height: 100px;
+  }
+  .hero-heading{
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
 }
   

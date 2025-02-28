@@ -22,7 +22,7 @@ export const Packages = () => {
 
   return (
     <section className="packages">
-      <Heading title="Our House Packages" />
+      <Heading title="Our House Packages" data-aos="fade-down"/>
       <div className="container">
         <div className="content grid3">
           {packageData.map((pkg, index) => (

@@ -8,13 +8,12 @@ import "../assest/styles/about.css";
 export const About = () => {
   return (
     <section className="about-us-section">
-      <Heading title="About Us" />
+      <Heading title="About Us" data-aos="fade-down" />
       <div className="container">
-        <div className="row align-items-center about-container">
-          
-          {/* Left Side - Image */}
+        <div className="row align-items-center about-container">          
+          {/* Left Side - Image  */}
           <div className="col-lg-6 text-center left-box">
-            <div className="image-wrapper">
+            <div className="image-wrapper" data-aos="flip-up">
               <img src={image_left} alt="Team Collaboration" className="img-fluid" />
             </div>
           </div>
@@ -32,32 +31,34 @@ export const About = () => {
               />
             </h2>
 
-            <p className="about-text">
-              Unity Builders Lanka is a leading construction company in Sri Lanka, known for delivering innovative, environmentally friendly, and high-quality solutions.
+            <p className="about-text" data-aos="fade-up" data-aos-delay="200">
+            With over 16 years of experience in the industry, we take pride in delivering high-quality construction solutions tailored to our clients' needs. Our expertise spans various aspects of construction, ensuring precision, durability, and excellence in every project we undertake.
             </p>
-            <p className="about-text">
-            We specialize in efficient home construction, offering competitive pricing, excellent customer service, and timely project completion, with projects completed in as little as six months.
+            <p className="about-text" data-aos="fade-up" data-aos-delay="300">
+            Currently, we provide our services within the Western Province, but we are expanding our reach and are excited about future projects across the island.
             </p>
-            <div className="text-light service-list">
-              <h3 className="text-align-center service-title">Services</h3>
-              <ul>
-                <li>Architectural Design Services</li>
-                <li>2D and 3D Designs</li>
-                <li>Interior Designs</li>
-                <li>Structural Designs</li>
-                <li>Building Design and Construction (Residential and Commercial)</li>
-                <li>Civil Engineering Consulting</li>
-                <li>Renovation Building Construction Works</li>
-              </ul>
-            </div>
-
-            <p className="about-location">
-              <strong>Location:</strong> No:72, Dandugama, Ja-Ela, Gampaha.
+            <p className="about-text" data-aos="fade-up" data-aos-delay="400">
+            Our team consists of highly skilled and dedicated professionals, including experienced civil engineers, quantity surveyors, site supervisors, and architects. We are committed to maintaining a friendly and collaborative approach, ensuring seamless project execution and customer satisfaction.
             </p>
 
-            <a href="#contact" className="custom-btn">Contact Us</a>
+            
           </div>
 
+        </div>
+        <div className="bottom-box">
+          <h3 className="service-title text-align-center text-light" data-aos="zoom-in">Services</h3>
+            <div className="service-list text-light mb-3">
+              <ul>
+                <li data-aos="fade-right">Architectural Design Services</li>
+                <li data-aos="fade-left">2D and 3D Designs</li>
+                <li data-aos="fade-right">Interior Designs</li>
+                <li data-aos="fade-left">Structural Designs</li>
+                <li data-aos="fade-right">Building Design and Construction (Residential and Commercial)</li>
+                <li data-aos="fade-left">Civil Engineering Consulting</li>
+                <li data-aos="fade-right">Renovation Building Construction Works</li>
+              </ul>
+            </div>
+            <a href="#contact" className="custom-btn" data-aos="fade-up">Contact Us</a>
         </div>
       </div>
     </section>
