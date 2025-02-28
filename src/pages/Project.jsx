@@ -7,18 +7,17 @@ import projectData from "../data/projectData"; // Project data
 export const Project = () => {
   return (
     <section className="projects-section py-5">
-      <Heading title="Ongoing Projects" />
+      <Heading title="Ongoing Projects" data-aos="fade-down"/>
       <div className="container">  
-
-        {/* Bootstrap Grid  */}
+        {/* Bootstrap Grid   */}
         <div className="row g-4">
           {projectData.map((item) => (
             <div key={item.id} className="col-lg-4 col-md-6 col-sm-12">
-              <div className="project-box">
+              <div className="project-box" data-aos={item.id%2===0?"fade-right":"fade-left"}>
                 <div className="img-wrapper">
                   <img src={item.image} alt={item.location} className="img-fluid project-img" />
                   <div className="overlay">
-                    <h3>{item.location}</h3>
+                    <h4>{item.location}</h4>
                   </div>
                 </div>
               </div>

@@ -164,7 +164,7 @@
     line-height: 1.4;
   }
   
-  /* Adjust Popup Styles for smaller screens */
+  /* Adjust Popup Styles for smaller screens  */
   @media (max-width: 600px) {
     .leaflet-popup-content {
       font-size: 14px; /* Reduce font size */

@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Heading = ({title}) => {
+export const Heading = ({title,...props}) => {
   return (
-    <><h1 className='heading'><b>{title}</b></h1></>
+    <><h1 className='heading' {...props}><b>{title}</b></h1></>
   )
 }

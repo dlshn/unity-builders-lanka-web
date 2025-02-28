@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,7 +12,18 @@ import { Contact } from './pages/Contact';
 import { Footer } from './components/Footer';
 import { MorePackages } from './components/MorePackages';
 
-function App() {
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+
+
+function App() {  
+  useEffect(() => {  // for AOS animations
+    AOS.init({
+      duration: 1000, // Animation duration (1s)
+      once: false, // Animation runs once per scroll
+    });
+  }, []);
+
   return (
     <div className="App">
       
