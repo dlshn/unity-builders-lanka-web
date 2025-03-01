@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c18b0831.css",
-    "main.js": "/static/js/main.0acc8c05.js",
+    "main.css": "/static/css/main.0d4079fd.css",
+    "main.js": "/static/js/main.6553fedd.js",
     "static/js/453.227bbaba.chunk.js": "/static/js/453.227bbaba.chunk.js",
     "static/media/hero-bg6.jpg": "/static/media/hero-bg6.098d5212ed3b65ee1d60.jpg",
     "static/media/about-bg (1).jpg": "/static/media/about-bg (1).3535152ca043756251d4.jpg",
     "static/media/hero-bg5.jpg": "/static/media/hero-bg5.234a95265b5119d9fb06.jpg",
     "static/media/about-left.jpg": "/static/media/about-left.5e3c2521785c86618e03.jpg",
     "static/media/miriswatta.jpg": "/static/media/miriswatta.eae659e5b5c8e89be3e8.jpg",
+    "static/media/about-bg (2).jpg": "/static/media/about-bg (2).2e93315c63d3e9c79ec4.jpg",
     "static/media/wattala.jpg": "/static/media/wattala.534582f210257fbcdd83.jpg",
-    "static/media/about-bg (4).jpg": "/static/media/about-bg (4).7754f1832d542345cd13.jpg",
     "static/media/about-bg (3).jpg": "/static/media/about-bg (3).44a653b53d669bf04a06.jpg",
     "static/media/kelaniya.jpg": "/static/media/kelaniya.e9e6b916ed9247eef7f8.jpg",
     "static/media/117.jpg": "/static/media/117.84570922f9b8cb59f022.jpg",
@@ -17,12 +17,12 @@
     "static/media/88.jpg": "/static/media/88.0c7d73e35330d84899b3.jpg",
     "static/media/logo.png": "/static/media/logo.355e6d779dc5d11ee153.png",
     "index.html": "/index.html",
-    "main.c18b0831.css.map": "/static/css/main.c18b0831.css.map",
-    "main.0acc8c05.js.map": "/static/js/main.0acc8c05.js.map",
+    "main.0d4079fd.css.map": "/static/css/main.0d4079fd.css.map",
+    "main.6553fedd.js.map": "/static/js/main.6553fedd.js.map",
     "453.227bbaba.chunk.js.map": "/static/js/453.227bbaba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c18b0831.css",
-    "static/js/main.0acc8c05.js"
+    "static/css/main.0d4079fd.css",
+    "static/js/main.6553fedd.js"
   ]
 }
