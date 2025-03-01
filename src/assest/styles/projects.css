@@ -1,7 +1,7 @@
 /* ---------- Projects Section ---------- */
 .projects-section {
-    height: auto; /* Ensures auto height based on content */
-    padding: 60px 20px;
+    height: auto;   
+    padding: 80px 20px;
     background: url("../about-bg\ \(1\).jpg") center/cover no-repeat;
     background-size: cover;
     background-attachment: fixed; /* Keeps the background in place while scrolling */
@@ -47,6 +47,7 @@
     background: rgba(0, 0, 0, 0.6);
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
@@ -81,7 +82,7 @@
   /* Responsive Fixes */
   @media (max-width: 768px) {
     .projects-section {
-      padding: 40px 10px;
+      padding: 100px 10px;
     }
     
     .overlay {

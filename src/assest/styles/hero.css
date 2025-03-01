@@ -1,6 +1,7 @@
 
 /* ---------- Hero Section ---------- */
-.hero {
+  
+  .hero {
     position: relative;
     height: 100vh;
     display: flex;
@@ -8,20 +9,21 @@
     align-items: center;
     text-align: center;
     color: white;
-  }
-  
-  .hero::before {
+}
+
+.hero::before {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url("../hero-bg6.jpg") center/cover no-repeat;
-    filter: brightness(0.6); /* Darkens only the image */
-    z-index: -1;
-  }
-  
+    filter: brightness(0.6);
+    z-index: 0;
+}
+
   .hero-logo{
     height: 120px;
     border-radius: 100%;
@@ -40,6 +42,10 @@
   .hero-heading {
     font-size: 60px;
     font-weight: bold;
+    z-index: 2; /* Ensures it appears above background */
+    position: relative;
+    min-height: 60px; /* Allows Typewriter to display fully */
+    color: white !important; /* Ensures visibility */
   }
   
   .subheading {

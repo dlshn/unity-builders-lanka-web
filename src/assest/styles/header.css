@@ -1,7 +1,7 @@
 /* ---------- Header Styles ---------- */
 .custom-header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     padding: 8px 0;
@@ -24,7 +24,7 @@
     height: 50px;
     border: 2px solid white;
     border-radius: 100%;
-    background-color:rgba(255, 255, 255, 0.5) ;
+    background-color:rgba(255, 255, 255, 0.7) ;
     padding: 5px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
@@ -63,14 +63,29 @@
   .nav-links a:hover {
     color: #072b7e;
   }
+  /* menu icon */
+  .menu-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2rem; /* Adjust size */
+    color: white; 
+    transition: color 0.3s ease-in-out;
+  }
+  .navbar{
+    padding: 10px 20px;
+    width: 100%;
+  }
   
   /* Desktop Menu */
   @media (min-width: 992px) {
+    .navbar{
+      padding: 5px 40px;
+    }
     .nav-links {
       display: flex !important;
       gap: 35px;
-    }
-  
+    } 
     .menu-icon {
       display: none;
     }
@@ -78,14 +93,26 @@
       color: hsl(197, 100%, 28%);
     }
   } 
-  /* menu icon */
-  .menu-icon {
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 2rem; /* Adjust size */
-    color: white; /* Default color */
-    transition: color 0.3s ease-in-out;
+
+  @media (max-width: 380px){
+    .navbar{
+      padding: 5px 0;
+      
+    }
+    .logo-img{
+      height: 55px;
+    }
+
   }
+
+  @media (max-width: 480px){
+    .logo-img{
+      height: 40px;
+    }
+    
+  }
+
+  
+  
   
   

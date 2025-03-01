@@ -6,15 +6,26 @@ import miriswatta from "../assest/project_images/miriswatta.jpg";
 
 
 const projectdata = [
-    { id: 1, location: "Miriswatta, Sri Lanka.", image: miriswatta },
-    { id: 2, location: "Kelaniya, Sri Lanka.", image: kelaniya },
-    { id: 3, location: "Wattala, Sri Lanka.", image: wattala },
+    {
+        id: 1,
+        site: "Project Site 1",
+        location: "https://maps.app.goo.gl/wJS87YYDS1jVRnnn9?g_st=com.google.maps.preview.copy",
+        images: [
+          img88,
+          img92,
+          img88
+        ]
+      },
+      
+    // { id: 1, location: "Miriswatta, Sri Lanka.", image: miriswatta },
+    // { id: 2, location: "Kelaniya, Sri Lanka.", image: kelaniya },
+    // { id: 3, location: "Wattala, Sri Lanka.", image: wattala },
     
-    { id: 4, location: "Negombo, Sri Lanka", image: img88 },
-    { id: 5, location: "Moratuwa, Sri Lanka", image: img92 },
-    { id: 6, location: "Negombo, Sri Lanka", image: img88 },
-    { id: 7, location: "Negombo, Sri Lanka", image: img88 },
-    { id: 8, location: "Negombo, Sri Lanka", image: img88 },
+    // { id: 4, location: "Negombo, Sri Lanka", image: img88 },
+    // { id: 5, location: "Moratuwa, Sri Lanka", image: img92 },
+    // { id: 6, location: "Negombo, Sri Lanka", image: img88 },
+    // { id: 7, location: "Negombo, Sri Lanka", image: img88 },
+    // { id: 8, location: "Negombo, Sri Lanka", image: img88 },
     ];
 
 export default projectdata;
