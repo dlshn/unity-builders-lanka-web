@@ -72,7 +72,7 @@ export const Packages = () => {
                 </>
               )}
             <br />
-              <b>Square feets:</b> {selectedPackage.details.sqrfts} sqrfts
+              <b>Square feets:</b> {selectedPackage.details.totalArea} sqrfts
             <br />
               {selectedPackage.extraDetails}
             </p>
