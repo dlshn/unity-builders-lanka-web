@@ -93,7 +93,7 @@ section{
   overflow: hidden;
 }
 
-/* Background dimming overlay */
+/* Background dimming overlay  */
 .packages::before {
   content: "";
   position: absolute;
@@ -189,7 +189,8 @@ section{
 
 .modal {
   background: #797979 !important;
-  display: block !important;
+  display: grid !important;
+  
   padding: 20px 20px;
   margin-top: 120px;
   margin-left: 500px;
@@ -224,12 +225,12 @@ section{
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 10px;
   font-size: 24px;
   color: #000000;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 .close-btn:hover {
@@ -250,7 +251,7 @@ section{
 }
 .modal-content p {
   font-size: 16px;
-  color: #555;
+  color: #3b3b3b;
   margin: 0 10px;
   padding: 0 40px;
   text-align: center; 
@@ -379,15 +380,24 @@ section{
   .content.grid3 {
     grid-template-columns: 1fr;
     gap: 15px;
+    border: 2px solid black;
+    margin: 0 20px;
   }
 
   .box {
     padding: 15px;
+    border: 2px solid black;
   }
 
   .modal {
-    width: 95%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto;
+    border: 2px solid #ea3232;
+  }
+
+  .modal-content{
+    border: 10px solid yellow;
   }
 
   .modal-content p {
@@ -398,7 +408,7 @@ section{
   .modal-btn {
     font-size: 14px;
     padding: 8px 15px;
-    width: 100%;
+    width: 50%;
   }
 
   .more-images img {

@@ -17,6 +17,7 @@ const packageData = [
     image: img88,
     moreImages: [img88, img92, img117, img117],
   },
+  
   {
     title: "Two Story House",
     description: "3 Bedroom and 2 Bathroom",
