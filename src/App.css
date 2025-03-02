@@ -14,10 +14,12 @@
   --black: #000;
   --sliver: #bac8d3;
 }
-body {
+html,body {
   background-color: var(--primaryBackground);
   color: var(--white);
   font-family: "Poppins", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -75,19 +77,40 @@ section{
 }
 
 
-/* ---------- Packages ---------- */
+/* ---------- Packages  ---------- */
 
 .packages {
-  height: auto; /* Ensures auto height based on content */
-  padding: 60px 20px;
-  background: url("./assest/hero-bg5.jpg") center/cover no-repeat;
+  position: relative;
+  height: auto;   
+  padding: 100px 20px;
+  background: url("./assest/Background_images/packages/1.jpg") center/cover no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Keeps the background in place while scrolling */
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Keeps content centered */
+  align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+/* Background dimming overlay  */
+.packages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity for brightness */
+  z-index: 0;
+}
+
+/* Ensure content stays above the overlay */
+.packages > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 .packages .container {
   max-width: 1200px;
@@ -104,7 +127,7 @@ section{
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -166,7 +189,8 @@ section{
 
 .modal {
   background: #797979 !important;
-  display: block !important;
+  display: grid !important;
+  
   padding: 20px 20px;
   margin-top: 120px;
   margin-left: 500px;
@@ -201,12 +225,12 @@ section{
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 10px;
   font-size: 24px;
   color: #000000;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 .close-btn:hover {
@@ -227,7 +251,7 @@ section{
 }
 .modal-content p {
   font-size: 16px;
-  color: #555;
+  color: #3b3b3b;
   margin: 0 10px;
   padding: 0 40px;
   text-align: center; 
@@ -310,7 +334,7 @@ section{
 
 @media (max-width: 768px) {
   .packages {
-    padding: 40px 10px;
+    padding: 100px 10px;
   }
   
   .content.grid3 {
@@ -356,6 +380,7 @@ section{
   .content.grid3 {
     grid-template-columns: 1fr;
     gap: 15px;
+    margin: 0 20px;
   }
 
   .box {
@@ -363,9 +388,11 @@ section{
   }
 
   .modal {
-    width: 95%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto;
   }
+
 
   .modal-content p {
     font-size: 13px;
@@ -375,7 +402,7 @@ section{
   .modal-btn {
     font-size: 14px;
     padding: 8px 15px;
-    width: 100%;
+    width: 50%;
   }
 
   .more-images img {

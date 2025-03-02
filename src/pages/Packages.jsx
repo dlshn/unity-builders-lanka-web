@@ -22,7 +22,7 @@ export const Packages = () => {
 
   return (
     <section className="packages">
-      <Heading title="Our House Packages" data-aos="fade-down"/>
+      <Heading title="House Packages" data-aos="fade-down"/>
       <div className="container">
         <div className="content grid3">
           {packageData.map((pkg, index) => (
@@ -72,7 +72,7 @@ export const Packages = () => {
                 </>
               )}
             <br />
-              <b>Square feets:</b> {selectedPackage.details.sqrfts} sqrfts
+              <b>Square feets:</b> {selectedPackage.details.totalArea} sqrfts
             <br />
               {selectedPackage.extraDetails}
             </p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './App.css';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';

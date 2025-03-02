@@ -1,14 +1,12 @@
-/* ---------- About Us Section ---------- */
+/* ---------- About Us Section  ---------- */
 .about-us-section {
-    background: url("../about-bg\ \(3\).jpg") center/cover no-repeat;
+    background: url("../Background_images/about/1.jpg") center/cover no-repeat;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 80px 20px 60px 20px;
-    
-
   }
   
   /* Glass effect container */
@@ -44,6 +42,7 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     padding: 20px;
+    color: white;
   }
   
   .about-title {

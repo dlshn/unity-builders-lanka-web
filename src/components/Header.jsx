@@ -22,13 +22,13 @@ export const Header = () => {
 
   return (
     <header className={`custom-header ${isScrolled ? "scrolled" : ""}`}>
-      <nav className="navbar container d-flex justify-content-between align-items-center py-2">
+      <nav className="navbar container d-flex justify-content-between align-items-center">
         {/* Logo */}
         <Link to="/" className="logo">
           <img src={logo} alt="Unity Builders Lanka" className="logo-img" />
         </Link>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu Icon  */}
         <button className="menu-icon d-lg-none" onClick={() => setMenuOpen(!menuOpen)}>
           <span className="material-icons">{menuOpen ? "close" : "menu"}</span>
         </button>
