@@ -127,7 +127,7 @@ section{
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -380,13 +380,11 @@ section{
   .content.grid3 {
     grid-template-columns: 1fr;
     gap: 15px;
-    border: 2px solid black;
     margin: 0 20px;
   }
 
   .box {
     padding: 15px;
-    border: 2px solid black;
   }
 
   .modal {
@@ -396,9 +394,6 @@ section{
     border: 2px solid #ea3232;
   }
 
-  .modal-content{
-    border: 10px solid yellow;
-  }
 
   .modal-content p {
     font-size: 13px;
