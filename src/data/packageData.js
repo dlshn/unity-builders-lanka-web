@@ -21,14 +21,14 @@ import img126_4 from "../assest/package_images/126/4.jpg";
 const packageData = [
   {
     title: "Two Story House",  // should update
-    description: "---",
+    description: "3 Bedroom and 2 Bathroom",
     details: {
       ground: { Bedroom: 1, Bathroom: 1 },
       first: { Bedroom: 2, Bathroom: 1},
       second: {Bedroom: null, Bathroom: null},
       totalArea: 1350
     },
-    extraDetails:"---",
+    extraDetails:"Living Are and Kitchen for ground floor and Open Veranda/TV lobby and Balcony for first floor",
     price: "88",
     image: img88_1,
     moreImages: [img88_1,img88_2, img88_3, img88_4]
