@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Heading } from "../components/Heading";
 import packageData from "../data/packageData";
 
-Modal.setAppElement("#root"); // Required for accessibility
+Modal.setAppElement("#root"); // Required for accessibility 
 
 export const Packages = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

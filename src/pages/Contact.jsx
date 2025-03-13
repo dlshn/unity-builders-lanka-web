@@ -62,7 +62,7 @@ export const Contact = () => {
           <div className="col-lg-6 map-info">
             <h2 className="mb-4 fw-bold text-center">Location</h2>
             <div className="map-container" data-aos="flip-left">
-              <iframe 
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.252173250844!2d79.8865237!3d7.0967429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f10063b2ea3b%3A0x6cd5f1699e850aff!2sUnity%20Builder's%20Lanka!5e0!3m2!1sen!2slk!4v1740861450127!5m2!1sen!2slk" 
                 width="100%" 
                 height="300" 
