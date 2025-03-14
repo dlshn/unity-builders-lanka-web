@@ -56,6 +56,7 @@ section{
   font-family: 'Playfair Display', serif;
   padding-bottom: 20px;
   margin-top: 0px;
+  margin-bottom: 0;
 }
 
 /* Button */
@@ -166,13 +167,19 @@ section{
   font-size: 18px;
   font-weight: bold;
   color: #d9534f;
+  margin-bottom: 5px;
+}
+.text h6{
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: rgb(255, 112, 112);
 }
 
 .package-btn {
   display: inline-block;
   padding: 12px 25px;
   color: white;
-  background: linear-gradient(45deg, #003e8a, #005bb5);
+  background: linear-gradient(50deg, #003a81, #359aff);
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -407,6 +414,10 @@ section{
 
   .more-images img {
     max-width: 150px;
+  }
+  .package-btn{
+    font-size: 16px ;
+    padding: 5px 15px;
   }
 }
 
