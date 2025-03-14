@@ -8,11 +8,11 @@ export const Footer = () => {
       <div className="container">
         {/* Navigation Links  */}
         <div className="shortcuts mb-2">
-          <a href="#contact" className="text-light mx-2 text-decoration-none">Contact</a>
-          <a href="/#" className="text-light mx-2 text-decoration-none">Home</a>
-          <a href="#packages" className="text-light mx-2 text-decoration-none">Packages</a>
-          <a href="#project" className="text-light mx-2 text-decoration-none">Projects</a>
-          <a href="#about" className="text-light mx-2 text-decoration-none">About</a>
+          <a href="contact" className="text-light mx-2 text-decoration-none">Contact</a>
+          <a href="/" className="text-light mx-2 text-decoration-none">Home</a>
+          <a href="packages" className="text-light mx-2 text-decoration-none">Packages</a>
+          <a href="project" className="text-light mx-2 text-decoration-none">Projects</a>
+          <a href="about" className="text-light mx-2 text-decoration-none">About</a>
         </div>
 
         {/* Horizontal Line */}

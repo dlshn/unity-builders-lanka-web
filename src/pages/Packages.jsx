@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
 import { Heading } from "../components/Heading";
 import packageData from "../data/packageData";
 
@@ -15,7 +16,6 @@ export const Packages = () => {
   };
 
   const closeModal = () => {
-    console.log("Closing Modal");
     setModalIsOpen(false);
     setSelectedPackage(null);
   };
@@ -26,15 +26,17 @@ export const Packages = () => {
       <div className="container">
         <div className="content grid3">
           {packageData.map((pkg, index) => (
-            <div className="box" data-aos="flip-left" key={index}>
+            <div className="box" data-aos="flip-left" key={pkg.details}>
               <div className="img" data-aos="fade-up">
-                <img src={pkg.image} alt={pkg.title} data-aos="fade-down" />
+                <img src={pkg.image} alt={pkg.title+" Professional House Design by Unity Builders Lanka"} data-aos="fade-down" />
               </div>
               <div className="text">
                 <h3 data-aos="fade-right">{pkg.title}</h3>
                 <p data-aos="fade-up-right"><b>{pkg.description}</b></p>
                 <h4 className="price" data-aos="fade-left">Rs.{pkg.price} lacks</h4>
+                {/* Temporary */}
                 <h6 data-aos="fade-right"><u>*This price is valid only until March 31st.</u></h6>
+                {/* Temporary */}
                 <button className="package-btn" data-aos="zoom-in" onClick={() => openModal(pkg)}>
                   View Details
                 </button>
@@ -57,7 +59,7 @@ export const Packages = () => {
 
         {selectedPackage && (
           <div className="modal-content">
-            <button className="close-btn" onClick={closeModal}>
+            <button className="close-btn" onClick={closeModal} aria-label="Close Modal">
               X
             </button>
             <h2><b>-{selectedPackage.title}-</b></h2>
@@ -86,7 +88,7 @@ export const Packages = () => {
               ))}
             </div>
             <p>Contact us to build this house on your land in as little as 6 months.</p>
-            <a href="#contact" className="modal-btn">Contact Us</a>
+            <Link to="/contact" className="modal-btn">Contact Us</Link>
           </div>
         )}
       </Modal>

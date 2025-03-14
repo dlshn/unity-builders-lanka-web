@@ -58,7 +58,7 @@ export const About = () => {
                 <li data-aos="fade-right">Renovation Building Construction Works</li>
               </ul>
             </div>
-            <a href="#contact" className="custom-btn" data-aos="fade-up">Contact Us</a>
+            <a href="contact" className="custom-btn" data-aos="fade-up">Contact Us</a>
         </div>
       </div>
     </section>
