@@ -28,7 +28,7 @@ export const Header = () => {
           <img src={logo} alt="Unity Builders Lanka" className="logo-img" />
         </Link>
 
-        {/* Mobile Menu Icon  */}
+        {/* Mobile Menu Icon */}
         <button className="menu-icon d-lg-none" onClick={() => setMenuOpen(!menuOpen)}>
           <span className="material-icons">{menuOpen ? "close" : "menu"}</span>
         </button>
