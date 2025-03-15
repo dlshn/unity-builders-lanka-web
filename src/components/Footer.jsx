@@ -1,18 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assest/styles/footer.css";
+import { Link } from "react-router-dom"; 
 
 export const Footer = () => {
   return (
     <footer className="footer bg-dark text-center text-light py-3">
       <div className="container">
-        {/* Navigation Links  */}
+        {/* Navigation Links */}
         <div className="shortcuts mb-2">
-          <a href="contact" className="text-light mx-2 text-decoration-none">Contact</a>
-          <a href="/" className="text-light mx-2 text-decoration-none">Home</a>
-          <a href="packages" className="text-light mx-2 text-decoration-none">Packages</a>
-          <a href="project" className="text-light mx-2 text-decoration-none">Projects</a>
-          <a href="about" className="text-light mx-2 text-decoration-none">About</a>
+          <Link to="/Contact" className="text-light mx-2 text-decoration-none">Contact</Link>
+          <Link to="/" className="text-light mx-2 text-decoration-none">Home</Link>
+          <Link to="/Packages" className="text-light mx-2 text-decoration-none">Packages</Link>
+          <Link to="/Project" className="text-light mx-2 text-decoration-none">Projects</Link>
+          <Link to="/About" className="text-light mx-2 text-decoration-none">About</Link>
         </div>
 
         {/* Horizontal Line */}
