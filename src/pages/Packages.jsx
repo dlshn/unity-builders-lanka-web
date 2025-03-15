@@ -23,6 +23,7 @@ export const Packages = () => {
   return (
     <section className="packages">
       <Heading title="House Packages" data-aos="fade-down"/>
+      <h6 className="text-light text-center mx-4 mb-4">These designs are fully customizable to meet your specific needs.</h6>
       <div className="container">
         <div className="content grid3">
           {packageData.map((pkg, index) => (
@@ -64,30 +65,32 @@ export const Packages = () => {
             </button>
             <h2><b>-{selectedPackage.title}-</b></h2>
             <p>
-              <b>Ground Floor:</b> Bedrooms-{selectedPackage.details.ground.Bedroom} | Bathrooms-{selectedPackage.details.ground.Bathroom}
+              <strong>Ground Floor:</strong> Bedrooms-<b>{selectedPackage.details.ground.Bedroom}</b> | Bathrooms-<b>{selectedPackage.details.ground.Bathroom}</b>
             <br />
-              <b>First Floor:</b> Bedrooms-{selectedPackage.details.first.Bedroom} | Bathrooms-{selectedPackage.details.first.Bathroom}
+              <strong>First Floor:</strong> Bedrooms-<b>{selectedPackage.details.first.Bedroom}</b> | Bathrooms-<b>{selectedPackage.details.first.Bathroom}</b>
             
               {selectedPackage.details.second.Bedroom && (
                 <>
                 <br />
-                <b>Second Floor:</b> Bedrooms-{selectedPackage.details.second.Bedroom}, Bathrooms-{selectedPackage.details.second.Bathroom}
+                <strong>Second Floor:</strong> Bedrooms-{selectedPackage.details.second.Bedroom}, Bathrooms-{selectedPackage.details.second.Bathroom}
                 </>
               )}
             <br />
-              <b>Square feets:</b> {selectedPackage.details.totalArea} sqrfts
-            <br />
-              {selectedPackage.extraDetails}
+              <strong>Square feets:</strong> <b>{selectedPackage.details.totalArea}</b> sqrfts
             </p>
+            <h6>{selectedPackage.extraDetails}</h6>
             <h4 className="price">Rs.{selectedPackage.price} lacks</h4>
             <p><u>(The total amount can be paid in three installments.)</u></p>
             
             <div className="more-images">
               {selectedPackage.moreImages && selectedPackage.moreImages.map((img, index) => (
-                <img key={index} src={img} alt={`More about ${selectedPackage.title}`} />
+                <img key={index} src={img} alt={`Professional House Design by Unity Builders Lanka for ${selectedPackage.title}`} />
               ))}
             </div>
-            <p>Contact us to build this house on your land in as little as 6 months.</p>
+            <h6 className="px-2 py-2">
+            Contact us to build this house on your land in as little as 6 months.
+            These designs can be customized to fit your specific needs.
+            </h6>
             <Link to="/contact" className="modal-btn">Contact Us</Link>
           </div>
         )}

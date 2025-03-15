@@ -245,15 +245,11 @@ section{
 }
 
 /* Modal Content Styling */
-.modal-conten{
-  display: flex;
-  margin: 40px;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .modal-content h2 {
   margin-top: 20px;
+  color: #005959;
   
 }
 .modal-content p {
@@ -262,6 +258,13 @@ section{
   margin: 0 10px;
   padding: 0 40px;
   text-align: center; 
+}
+.modal-content p strong{
+  color: #00417d;
+}
+.modal-content h6{
+  margin: 10px 40px;
+  color: #005959;
 }
 .modal-content .price{
   margin-bottom: 0;
@@ -402,8 +405,12 @@ section{
 
 
   .modal-content p {
-    font-size: 13px;
+    font-size: 14px;
     padding: 0 10px;
+  }
+  .modal-content h6{
+    font-size: 14px;
+    margin: 10px 20px;
   }
 
   .modal-btn {
