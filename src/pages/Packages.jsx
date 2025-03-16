@@ -87,7 +87,7 @@ export const Packages = () => {
                 <img key={index} src={img} alt={`Professional House Design by Unity Builders Lanka for ${selectedPackage.title}`} />
               ))}
             </div>
-            <h6 className="px-2 py-2">
+            <h6 className="px-2 pt-2">
             Contact us to build this house on your land in as little as 6 months.
             These designs can be customized to fit your specific needs.
             </h6>
