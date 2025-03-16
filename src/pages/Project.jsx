@@ -51,7 +51,7 @@ export const Project = () => {
 
         {/* Centered Contact Button */}
         <div className="text-center mt-4">
-          <a href="#contact" className="project-btn">Contact Us</a>
+          <a href="contact" className="project-btn">Contact Us</a>
         </div>
       </div>
     </section>
