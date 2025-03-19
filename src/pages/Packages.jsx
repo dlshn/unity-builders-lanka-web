@@ -27,13 +27,13 @@ export const Packages = () => {
       <div className="container">
         <div className="content grid3">
           {packageData.map((pkg, index) => (
-            <div className="box" data-aos="flip-left" key={pkg.details}>
-              <div className="img" data-aos="fade-up">
-                <img src={pkg.image} alt={pkg.title+" Professional House Design by Unity Builders Lanka"} data-aos="fade-down" />
+            <div className="box" data-aos="zoom-in" key={pkg.details}>
+              <div className="img" >
+                <img src={pkg.image} alt={pkg.title+" Professional House Design by Unity Builders Lanka"} />
               </div>
               <div className="text">
-                <h3 data-aos="fade-right">{pkg.title}</h3>
-                <p data-aos="fade-up-right"><b>{pkg.description}</b></p>
+                <h3 data-aos="zoom-in">{pkg.title}</h3>
+                <p data-aos="fade-right"><b>{pkg.description}</b></p>
                 <h4 className="price" data-aos="fade-left">Rs.{pkg.price} lacks</h4>
                 {/* Temporary */}
                 <h6 data-aos="fade-right"><u>*This price is valid only until March 31st.</u></h6>
