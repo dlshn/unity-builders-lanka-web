@@ -8,10 +8,15 @@ import img96_2 from "../assest/package_images/96/2.jpg";
 import img96_3 from "../assest/package_images/96/3.jpg";
 import img96_4 from "../assest/package_images/96/4.jpg";
 
-import img98_1 from "../assest/package_images/98/1.jpg";
-import img98_2 from "../assest/package_images/98/2.jpg";
-import img98_3 from "../assest/package_images/98/3.jpg";
-import img98_4 from "../assest/package_images/98/4.jpg";
+import img98_1_1 from "../assest/package_images/98-1/1.jpg";
+import img98_1_2 from "../assest/package_images/98-1/2.jpg";
+import img98_1_3 from "../assest/package_images/98-1/3.jpg";
+import img98_1_4 from "../assest/package_images/98-1/4.jpg";
+
+import img98_2_1 from "../assest/package_images/98-2/1.jpg";
+import img98_2_2 from "../assest/package_images/98-2/2.jpg";
+import img98_2_3 from "../assest/package_images/98-2/3.jpg";
+import img98_2_4 from "../assest/package_images/98-2/4.jpg";
 
 import img126_1 from "../assest/package_images/126/1.jpg";
 import img126_2 from "../assest/package_images/126/2.jpg";
@@ -101,12 +106,26 @@ const packageData = [
       ground: { Bedroom: 1, Bathroom: 1 },
       first: { Bedroom: 2, Bathroom: 1},
       second: {Bedroom: null, Bathroom: null},
-      totalArea: 1450
+      totalArea: 1540
     },
     extraDetails:"Living/Dining/Kitchen/Single Car Porch for ground floor and TV lobby and Balcony for first floor",
     price: "98",
-    image: img98_1,
-    moreImages: [img98_1,img98_2, img98_3, img98_4]
+    image: img98_1_1,
+    moreImages: [img98_1_1,img98_1_2, img98_1_3, img98_1_4]
+  },
+  {
+    title: "Two Story House",
+    description: "3 Bedroom and 2 Bathroom",
+    details: {
+      ground: { Bedroom: 1, Bathroom: 1 },
+      first: { Bedroom: 2, Bathroom: 1},
+      second: {Bedroom: null, Bathroom: null},
+      totalArea: 1540
+    },
+    extraDetails:"Living/Dining/Kitchen/Single Car Porch for ground floor and TV lobby and Balcony for first floor",
+    price: "98",
+    image: img98_2_1,
+    moreImages: [img98_2_1,img98_2_2, img98_2_3, img98_2_4]
   },
   {
     title: "Two Story House",

@@ -154,12 +154,14 @@ section{
   font-size: 20px;
   font-weight: bold;
   color: var(--primaryColor);
+  font-family:'Times New Roman', Times, serif;
+  margin-bottom: 0;
 }
 
 .text p {
   font-size: 16px;
   color: #555;
-  margin: 10px 0;
+  margin: 0;
   
 }
 
@@ -250,6 +252,7 @@ section{
 .modal-content h2 {
   margin-top: 20px;
   color: #005959;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   
 }
 .modal-content p {
@@ -261,10 +264,12 @@ section{
 }
 .modal-content p strong{
   color: #00417d;
+  
 }
 .modal-content h6{
   margin: 10px 40px;
   color: #005959;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .modal-content .price{
   margin-bottom: 0;
