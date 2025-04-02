@@ -36,7 +36,7 @@ export const Packages = () => {
                 <p data-aos="fade-right"><b>{pkg.description}</b></p>
                 <h4 className="price" data-aos="fade-left">Rs.{pkg.price} lacks</h4>
                 {/* Temporary */}
-                <h6 data-aos="fade-right"><u>*This price is valid only until March 31st.</u></h6>
+                {/* <h6 data-aos="fade-right"><u>*This price is valid only until March 31st.</u></h6> */}
                 {/* Temporary */}
                 <button className="package-btn" data-aos="zoom-in" onClick={() => openModal(pkg)}>
                   View Details
