@@ -18,6 +18,12 @@ import rilaulla_2_1 from "../assest/project_images/Rilaulla(2)/1.jpg";
 import rilaulla_2_2 from "../assest/project_images/Rilaulla(2)/2.jpg";
 import rilaulla_2_3 from "../assest/project_images/Rilaulla(2)/3.jpg";
 
+import rilaulla_1_1 from "../assest/project_images/Rilaulla(1)/1.jpg";
+import rilaulla_1_2 from "../assest/project_images/Rilaulla(1)/2.jpg";
+import rilaulla_1_3 from "../assest/project_images/Rilaulla(1)/3.jpg";
+import rilaulla_1_4 from "../assest/project_images/Rilaulla(1)/4.jpg";
+import rilaulla_1_5 from "../assest/project_images/Rilaulla(1)/5.jpg";
+
 import wattala1 from "../assest/project_images/Wattala/1.jpg";
 import wattala2 from "../assest/project_images/Wattala/2.jpg";
 import wattala3 from "../assest/project_images/Wattala/3.jpg";
@@ -50,9 +56,42 @@ import panadura_1_1 from "../assest/project_images/Panadura(1)/1.jpg";
 import panadura_1_2 from "../assest/project_images/Panadura(1)/2.jpg";
 import panadura_1_3 from "../assest/project_images/Panadura(1)/3.jpg";
 
+import moratuwa1 from "../assest/project_images/Moratuwa/1.jpg";
+import moratuwa2 from "../assest/project_images/Moratuwa/2.jpg";
+import moratuwa3 from "../assest/project_images/Moratuwa/3.jpg";
+import moratuwa4 from "../assest/project_images/Moratuwa/4.jpg";
+import moratuwa5 from "../assest/project_images/Moratuwa/5.jpg";
+
 
 const projectdata = [
     
+    {
+        id: 14,
+        site: "Moratuwa",
+        location: "",  // location link not provided
+        images: [
+            moratuwa1,
+            moratuwa2,
+            moratuwa3,
+            moratuwa4,
+            moratuwa5
+            
+        ]
+    },
+    {
+        id: 15,
+        site: "Rilaulla 1",
+        location: "", // location link not provided
+        images: [
+            rilaulla_1_1,
+            rilaulla_1_2,
+            rilaulla_1_3,
+            rilaulla_1_4,
+            rilaulla_1_5
+
+            
+        ]
+    },
     {
         id: 1,
         site: "Kadawatha",

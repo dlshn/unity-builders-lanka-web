@@ -178,7 +178,7 @@ section{
 }
 
 .package-btn {
-  display: inline-block;
+  /* display: inline-block;
   padding: 12px 25px;
   color: white;
   background: linear-gradient(50deg, #003a81, #359aff);
@@ -186,12 +186,19 @@ section{
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
+  color: white;
+  background: linear-gradient(45deg, #003e8a, #005bb5);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 15px;
+  border-radius: 10px;
 }
 .package-btn:hover {
-  background: var(--greyDark);
-  color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: white;
+    color: #003e8a;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Fix modal visibility */

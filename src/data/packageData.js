@@ -81,7 +81,7 @@ const packageData = [
       totalArea: 1350
     },
     extraDetails:"Living Are and Kitchen for ground floor and Open Veranda/TV lobby and Balcony for first floor",
-    price: "88",
+    price: "94",
     image: img88_1,
     moreImages: [img88_1,img88_2, img88_3, img88_4]
   },
@@ -95,7 +95,7 @@ const packageData = [
       totalArea: 1400
     },
     extraDetails:"Living/Dining/Kitchen for ground floor and TV lobby and Balcony for first floor",
-    price: "96",
+    price: "102",
     image: img96_1,
     moreImages: [img96_1,img96_2, img96_3, img96_4]
   },
@@ -109,7 +109,7 @@ const packageData = [
       totalArea: 1540
     },
     extraDetails:"Living/Dining/Kitchen/Single Car Porch for ground floor and TV lobby and Balcony for first floor",
-    price: "98",
+    price: "104",
     image: img98_1_1,
     moreImages: [img98_1_1,img98_1_2, img98_1_3, img98_1_4]
   },
@@ -123,7 +123,7 @@ const packageData = [
       totalArea: 1540
     },
     extraDetails:"Living/Dining/Kitchen/Single Car Porch for ground floor and TV lobby and Balcony for first floor",
-    price: "98",
+    price: "104",
     image: img98_2_1,
     moreImages: [img98_2_1,img98_2_2, img98_2_3, img98_2_4]
   },
@@ -137,7 +137,7 @@ const packageData = [
       totalArea: 1650
     },
     extraDetails:"Living/Dining/Kitchen/Single Car Porch for ground floor and TV lobby and Balcony for first floor",
-    price: "126",
+    price: "132",
     image: img126_1,
     moreImages: [img126_1,img126_2, img126_3, img126_4]
   },
@@ -152,7 +152,7 @@ const packageData = [
       totalArea: 1750
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor and TV lobby and Balcony for first floor",
-    price: "137",
+    price: "145",
     image: img137_1,
     moreImages: [img137_1,img137_2, img137_3, img137_4]
   },
@@ -167,7 +167,7 @@ const packageData = [
       totalArea: 1750
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor and TV lobby and Balcony for first floor",
-    price: "138",
+    price: "146",
     image: img138_1,
     moreImages: [img138_1,img138_2, img138_3, img138_4]
   },
@@ -181,7 +181,7 @@ const packageData = [
       totalArea: 2025
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "156",
+    price: "164",
     image: img156_1,
     moreImages: [img156_1,img156_2, img156_3, img156_4]
   },
@@ -197,7 +197,7 @@ const packageData = [
       totalArea: 2800
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "218",
+    price: "226",
     image: img218_1,
     moreImages: [img218_1,img218_2, img218_3, img218_4]
   },
@@ -211,7 +211,7 @@ const packageData = [
       totalArea: 2850
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "225",
+    price: "233",
     image: img225_1,
     moreImages: [img225_1,img225_2, img225_3, img225_4]
   },
@@ -225,7 +225,7 @@ const packageData = [
       totalArea: 2925
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "232",
+    price: "240",
     image: img232_1,
     moreImages: [img232_1,img232_2, img232_3, img232_4]
   },
@@ -239,7 +239,7 @@ const packageData = [
       totalArea: 3050
     },
     extraDetails:"Living,Dining Areas/Kitchen and Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "238",
+    price: "246",
     image: img238_1,
     moreImages: [img238_1,img238_2, img238_3, img238_4]
   },
@@ -253,7 +253,7 @@ const packageData = [
       totalArea: 3200
     },
     extraDetails:"Living,Dining Areas/Kitchen and Double Car Porch for ground floor , TV lobby and Balcony for first floor and Roof terrace second floor",
-    price: "254",
+    price: "262",
     image: img254_1,
     moreImages: [img254_1,img254_2, img254_3, img254_4]
   },
