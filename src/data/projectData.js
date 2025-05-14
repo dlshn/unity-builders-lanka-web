@@ -32,9 +32,15 @@ import kelaniya1 from "../assest/project_images/Kelaniya/1.jpg";
 import kelaniya2 from "../assest/project_images/Kelaniya/2.jpg";
 import kelaniya3 from "../assest/project_images/Kelaniya/3.jpg";
 
-import kadawatha1 from "../assest/project_images/Kadawatha/1.jpg";
-import kadawatha2 from "../assest/project_images/Kadawatha/2.jpg";
-import kadawatha3 from "../assest/project_images/Kadawatha/3.jpg";
+import kadawatha_1_1 from "../assest/project_images/Kadawatha(1)/1.jpg";
+import kadawatha_1_2 from "../assest/project_images/Kadawatha(1)/2.jpg";
+import kadawatha_1_3 from "../assest/project_images/Kadawatha(1)/3.jpg";
+
+import kadawatha_2_1 from "../assest/project_images/Kadawatha(2)/1.jpg";
+import kadawatha_2_2 from "../assest/project_images/Kadawatha(2)/2.jpg";
+import kadawatha_2_3 from "../assest/project_images/Kadawatha(2)/3.jpg";
+import kadawatha_2_4 from "../assest/project_images/Kadawatha(2)/4.jpg";
+import kadawatha_2_5 from "../assest/project_images/Kadawatha(2)/5.jpg";
 
 import mahara1 from "../assest/project_images/Mahara/1.jpg";
 import mahara2 from "../assest/project_images/Mahara/2.jpg";
@@ -66,6 +72,19 @@ import moratuwa5 from "../assest/project_images/Moratuwa/5.jpg";
 const projectdata = [
     
     {
+        id: 16,
+        site: "Kadawatha 2",
+        location: "",
+        images: [
+            kadawatha_2_1,
+            kadawatha_2_2,
+            kadawatha_2_3,
+            kadawatha_2_4,
+            kadawatha_2_5
+            
+        ]
+    },
+    {
         id: 14,
         site: "Moratuwa",
         location: "",  // location link not provided
@@ -94,12 +113,12 @@ const projectdata = [
     },
     {
         id: 1,
-        site: "Kadawatha",
+        site: "Kadawatha 1",
         location: "https://maps.app.goo.gl/pdPFG69W45iWB4zZ6",
         images: [
-            kadawatha1,
-            kadawatha2,
-            kadawatha3
+            kadawatha_1_1,
+            kadawatha_1_2,
+            kadawatha_1_3
             
         ]
     },
