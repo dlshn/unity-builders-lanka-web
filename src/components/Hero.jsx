@@ -6,7 +6,7 @@ import logo from "../assest/logo.png";
 
 export const Hero = () => {
   return (
-    <section className="hero d-flex align-items-center">
+    <section className="hero d-flex align-items-center"> 
       <div className="container text-center">
         <img src={logo} alt="Unity Builders Lanka logo" className="hero-logo" data-aos="flip-left" />
         <h1 className="hero-heading" data-aos="">
