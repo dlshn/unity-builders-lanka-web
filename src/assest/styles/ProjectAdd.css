@@ -1,0 +1,8 @@
+.project-form-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1c3d65, #375983, #7389b9); /* light to deep blue */
+  
+}

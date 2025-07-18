@@ -11,6 +11,11 @@ import {Packages} from './pages/Packages';
 import {Project}  from './pages/Project';
 import { Contact } from './pages/Contact';
 import { Footer } from './components/Footer';
+import AddPackageForm from './pages/PackageAdd';
+import ProjectAdd from './pages/ProjectAdd';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+
 
 
 import AOS from "aos";
@@ -36,7 +41,12 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Packages" element={<Packages />} />
           <Route path="/Project" element={<Project />} />
-          <Route path="/Contact" element={<Contact />} /> 
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/AddPackage" element={<AddPackageForm />} />
+          <Route path="/ProjectAdd" element={<ProjectAdd />} />
+          <Route path="/AdminLogin" element={<AdminLogin />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
+          
         </Routes>
         <Footer />
       </Router>
