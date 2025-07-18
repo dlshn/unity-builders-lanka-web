@@ -15,6 +15,7 @@ import AddPackageForm from './pages/PackageAdd';
 import ProjectAdd from './pages/ProjectAdd';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 
 
 
@@ -35,6 +36,7 @@ function App() {
     <div className="App">
       
       <Router>
+        <ScrollToTop /> {/* Add ScrollToTop component */}
         <Header />
         <Routes >
           <Route path="/" element={<Home />} />

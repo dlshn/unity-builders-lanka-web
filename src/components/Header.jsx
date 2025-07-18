@@ -36,7 +36,6 @@ export const Header = () => {
         {/* Navigation Links */}
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/AdminLogin" onClick={() => setMenuOpen(false)}>Admin Login</Link>
           <Link to="/About" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/Packages" onClick={() => setMenuOpen(false)}>Packages</Link>
           <Link to="/Project" onClick={() => setMenuOpen(false)}>Projects</Link>
