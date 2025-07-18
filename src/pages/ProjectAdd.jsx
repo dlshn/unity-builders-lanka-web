@@ -39,11 +39,18 @@ const ProjectAdd = () => {
         urls.push(url);
       }
 
-      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/projects/create`, {
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/projects/create`,
+        {
         title: form.title,
         location: form.location,
         urls,
-      });
+      },
+      {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("admin_token")}`
+          }
+        }
+    );
 
       setMessage(res.data.message || "Project added successfully!");
       setForm({ title: "", location: "", urls: [] });
@@ -57,8 +64,8 @@ const ProjectAdd = () => {
   };
 
   return (
-    <div className="project-form-bg py-5">
-      <div className="card p-4 mt-5 shadow" style={{ maxWidth: "700px",width:"80%", margin: "auto" }}>
+    <div className="project-form-bg">
+      <div className="card p-4 shadow" style={{ maxWidth: "700px",width:"80%", margin: "auto" }}>
         <h2 className="text-center mb-4">Add New Project</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">

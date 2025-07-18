@@ -1,0 +1,60 @@
+@keyframes modernBounce {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Optional: Slight delay to create staggered bouncing */
+.c1,.card-body1 {
+  animation: modernBounce 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+.c2,.card-body2 {
+  animation: modernBounce 3s ease-in-out infinite;
+  animation-delay: 0.75s;
+}
+.c3,.card-body3 {
+  animation: modernBounce 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+.c4,.card-body4 {
+  animation: modernBounce 3s ease-in-out infinite;
+  animation-delay: 2.25s;
+}
+
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1c3d65, #375983, #7389b9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-card {
+  width: 180px;
+  height: 180px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-card:hover {
+  background-color: rgb(201, 230, 255);
+  color: #000;
+}
+
+.dash-card h5 {
+  color: #2c3e50;
+  font-weight: 600;
+}

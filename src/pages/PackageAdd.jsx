@@ -58,7 +58,12 @@ const PackageAdd = () => {
 
       const res = await axios.post(
         `${process.env.REACT_APP_API_BASE_URL}/api/packages/create`,
-        { ...form, urls: imageUrls }
+        { ...form, urls: imageUrls },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("admin_token")}`
+          }
+        }
       );
 
       setMessage(res.data.message || "Package added successfully!");

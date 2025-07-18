@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../assest/styles/AdminLogin.css'; // For custom styles
+
 
 
 const AdminLogin = () => {
@@ -26,7 +28,7 @@ const AdminLogin = () => {
       const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/verify-otp`, { email, otp });
       localStorage.setItem("admin_token", res.data.token);
       setMessage("Login successful!");
-      navigate("/");
+      navigate("/AdminDashboard"); // Redirect to admin dashboard
 
       // optionally redirect or refresh
     } catch (err) {
@@ -35,47 +37,50 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="py-5">
-        <div className="container mt-5 p-3 bg-light" style={{ maxWidth: "400px" }}>
-        <h3 className="text-center text-dark">Admin Login</h3>
-        <p className="text-center text-muted">Only authorized admins can login</p>
+        <div className="admin-login-bg">
+         <div className="login-card d-flex flex-column align-items-center">
+            <h2 className="text-center text-dark">- Admin Login -</h2>
+            <p className="text-center text-danger">*Only authorized admins can login</p>
 
-        {step === 1 && (
-            <>
-            <label>Email</label>
-            <input
-                type="email"
-                className="form-control mb-3"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-            />
-            <button className="btn btn-primary w-100" onClick={handleSendOtp}>
-                Send OTP
-            </button>
-            </>
-        )}
+            {step === 1 && (
+                <>
+                <label className="">Email :</label>
+                <input
+                    type="email"
+                    className="form-control mb-3"
+                    value={email}
+                    placeholder="Enter your email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <button className="btn btn-primary w-100" onClick={handleSendOtp}>
+                    Send OTP
+                </button>
+                </>
+            )}
+            {message && <div className="alert alert-info mt-3">{message}</div>}
 
-        {step === 2 && (
-            <>
-            <label>Enter OTP</label>
-            <input
-                type="text"
-                className="form-control mb-3"
-                value={otp}
-                onChange={(e) => setOtp(e.target.value)}
-                required
-            />
-            <button className="btn btn-success w-100" onClick={handleVerifyOtp}>
-                Verify OTP
-            </button>
-            </>
-        )}
+            {step === 2 && (
+                <>
+                <label>Enter OTP :</label>
+                <input
+                    type="text"
+                    className="form-control mb-3"
+                    value={otp}
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                />
+                <button className="btn btn-primary w-50" onClick={handleVerifyOtp}>
+                    Verify OTP
+                </button>
+                </>
+            )}
 
-        {message && <div className="alert alert-info mt-3">{message}</div>}
-        </div>
-        </div>
-  );
+            
+            </div>
+         </div>
+        );
+
 };
 
 export default AdminLogin;

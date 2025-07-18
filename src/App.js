@@ -14,6 +14,7 @@ import { Footer } from './components/Footer';
 import AddPackageForm from './pages/PackageAdd';
 import ProjectAdd from './pages/ProjectAdd';
 import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/AddPackage" element={<AddPackageForm />} />
           <Route path="/ProjectAdd" element={<ProjectAdd />} />
           <Route path="/AdminLogin" element={<AdminLogin />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
           
         </Routes>
         <Footer />
