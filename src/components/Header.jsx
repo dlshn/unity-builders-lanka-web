@@ -35,11 +35,11 @@ export const Header = () => {
 
         {/* Navigation Links */}
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/About" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/Packages" onClick={() => setMenuOpen(false)}>Packages</Link>
-          <Link to="/Project" onClick={() => setMenuOpen(false)}>Projects</Link>
-          <Link to="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)} className="item">Home</Link> 
+          <Link to="/Packages" onClick={() => setMenuOpen(false)} className="item">House Packages</Link>
+          <Link to="/Project" onClick={() => setMenuOpen(false)} className="item">Ongoing Projects</Link>
+          <Link to="/About" onClick={() => setMenuOpen(false)} className="item">About Us</Link>
+          <Link to="/Contact" onClick={() => setMenuOpen(false)} className="item">Contact Us</Link>
         </div>
       </nav>
     </header>
