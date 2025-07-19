@@ -2,24 +2,21 @@
 /* ---------- Hero Section ---------- */
   @keyframes bounce {
   0% { transform: scale(1); }
-  
-  50% { transform: scale(1.2); }
-  
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 
 }
 
-.box {
-  
-}
   .hero {
     position: relative;
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: white; 
+
 }
 
 .hero::before {
@@ -36,12 +33,12 @@
 }
 
   .hero-logo{
-    height: 120px;
+    height: 200px;
     border-radius: 100%;
     background-color: white;
     padding: 10px;
     border: 2px solid rgb(192, 192, 192);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     animation: bounce 1s infinite;
@@ -58,20 +55,23 @@
     position: relative;
     min-height: 60px; /* Allows Typewriter to display fully */
     color: white !important; /* Ensures visibility */
+    margin-bottom: 0;
+    margin-top: 20px;
+
   }
   
   .subheading {
     font-size: 32px;
-    margin-top: 10px;
     font-weight: bold;
+    margin-top: 0px;
     font-family: 'Playfair Display', serif;
-    
+    margin-bottom: 0px;
   }
   
   .hero-description {
     font-size: 18px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 10px auto;
     color: rgb(209, 209, 209);
     
   }
@@ -97,7 +97,6 @@
     .hero-heading {
       font-size: 40px;
       height: 60px;
-      margin-bottom: 20px;
     }
   
     .subheading {
@@ -114,15 +113,25 @@
   .hero-heading{
     height: 80px;
   }
+  
 }
 @media (max-width: 480px){
+  .container-fluid{
+    margin-top: 10px;
+    border: 2px solid var(--primaryColor);
+    padding: auto 0;
+  }
     .hero-logo{
-      height: 100px;
-    }
+    height: 300px;
+    padding: 0;
+    margin: 0 0 10px 0;
+    width: 100%;
+    border-radius: 0;
+    animation: none;
+  }
     .hero-heading {
       font-size: 40px;
-      height: 100px;
-      margin-bottom: 20px;
+      height: 50px;
     }
   
     .subheading {
@@ -140,13 +149,21 @@
 
 }
 
-@media (max-width: 378px){
-  .hero-logo{
-    height: 100px;
-  }
+@media (max-width: 400px){
+  
   .hero-heading{
-    height: 120px;
-    margin-bottom: 10px;
+    height: 105px;
+    margin-top: 10px;
+  }
+  .subheading {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+  .description{
+    margin: 10px 20px;
+    padding: 10px 10px;
   }
 
 }
