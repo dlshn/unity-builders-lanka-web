@@ -49,10 +49,18 @@ export const Project = () => {
                     </button>
                   </div>
                 </div>
-                <div className="d-flex flex-row" data-aos="fade-left">
-                  <HiLocationMarker className="text-light m-auto fs-3" />
-                  <h4 className="location-text text-light mt-2 mx-2">{item.title}</h4>
+                <div className="d-flex flex-column align-items-center" data-aos="fade-left">
+                  
+                  <div className="d-flex flex-row">
+                    <HiLocationMarker className="text-dark m-auto fs-3" />
+                    <h4 className="location-text text-dark mt-2 mx-2">{item.title}</h4>
+                  </div>
+                  <h6 className="updated-date text-dark mt-1 mx-2">
+                    Updated: {new Date(item.updatedAt).toLocaleDateString()}
+                  </h6>
+                  
                 </div>
+
                 <a href={item.location} type="button" className="location-btn btn mb-2" data-aos="fade-right">
                   Location
                 </a>

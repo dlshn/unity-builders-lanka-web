@@ -13,7 +13,7 @@ export const Footer = () => {
           <Link to="/Contact" className="text-light mx-2 text-decoration-none">Contact</Link>
           <Link to="/Packages" className="text-light mx-2 text-decoration-none">Packages</Link>
           <Link to="/Project" className="text-light mx-2 text-decoration-none">Projects</Link>
-          <Link to="/About" className="text-light mx-2 text-decoration-none">About</Link> |
+          <Link to="/About" className="text-light mx-2 text-decoration-none">About</Link>
           <Link to="/AdminLogin" className="text-light mx-2 text-decoration-none">Admin Login</Link>
         </div>
 

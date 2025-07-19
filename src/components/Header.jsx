@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import "../assest/styles/header.css";
 import logo from "../assest/logo2.png";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
+
+  useEffect(() => {
+    const token = localStorage.getItem("admin_token");
+    setIsLoggedIn(!!token);
+  }, []);
   // Add background color on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -19,6 +26,12 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("admin_token");
+    setIsLoggedIn(false);
+    navigate("/");
+  };
 
   return (
     <header className={`custom-header ${isScrolled ? "scrolled" : ""}`}>
@@ -40,6 +53,15 @@ export const Header = () => {
           <Link to="/Project" onClick={() => setMenuOpen(false)} className="item">Ongoing Projects</Link>
           <Link to="/About" onClick={() => setMenuOpen(false)} className="item">About Us</Link>
           <Link to="/Contact" onClick={() => setMenuOpen(false)} className="item">Contact Us</Link>
+          {isLoggedIn && (
+            <button
+              onClick={handleLogout}
+              className="btn btn-danger btn-sm ms-3"
+              style={{ borderRadius: "10px" }}
+            >
+              Logout
+            </button>
+          )}
         </div>
       </nav>
     </header>
