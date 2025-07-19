@@ -13,7 +13,7 @@
   
   /* Add blurred background when scrolled */
   .custom-header.scrolled {
-    background: rgba(255, 255, 255, 0.1); /* Light transparency */
+    background: rgba(255, 255, 255, 0.1); /* Light transparency */ 
     backdrop-filter: blur(10px); /* Apply blur effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
@@ -43,13 +43,26 @@
   .nav-links.active {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 50%;
+    width: 100%;
     background: rgb(116, 116, 116);
-    border-radius: 0px;
+    border-radius: 10px;
     padding: 15px;
+  }
+  .nav-links.active .item{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    background: #010f2f;
   }
   
   .nav-links a {

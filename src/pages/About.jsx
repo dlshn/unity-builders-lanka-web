@@ -46,16 +46,16 @@ export const About = () => {
 
         </div>
         <div className="bottom-box">
-          <h3 className="service-title text-align-center text-light" data-aos="zoom-in">Services</h3>
+          <h3 className="service-title text-align-center text-light" data-aos="zoom-in">Our Services</h3>
             <div className="service-list text-light mb-3">
               <ul>
-                <li data-aos="fade-right">Architectural Design Services</li>
-                <li data-aos="fade-left">2D and 3D Designs</li>
-                <li data-aos="fade-right">Interior Designs</li>
-                <li data-aos="fade-left">Structural Designs</li>
-                <li data-aos="fade-right">Building Design and Construction (Residential and Commercial)</li>
-                <li data-aos="fade-left">Civil Engineering Consulting</li>
-                <li data-aos="fade-right">Renovation Building Construction Works</li>
+                <li className="li1">Architectural Design Services</li>
+                <li className="li2">2D and 3D Designs</li>
+                <li className="li3">Interior Designs</li>
+                <li className="li4">Structural Designs</li>
+                <li className="li5">Building Design and Construction (Residential and Commercial)</li>
+                <li className="li6">Civil Engineering Consulting</li>
+                <li className="li7">Renovation Building Construction Works</li>
               </ul>
             </div>
             <a href="contact" className="custom-btn" data-aos="fade-up">Contact Us</a>

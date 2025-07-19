@@ -37,7 +37,7 @@
     border-radius: 100%;
     background-color: white;
     padding: 10px;
-    border: 2px solid rgb(192, 192, 192);
+    /* border: 2px solid rgb(192, 192, 192); */
     /* margin-bottom: 10px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -117,18 +117,16 @@
 }
 @media (max-width: 480px){
   .container-fluid{
-    margin-top: 10px;
-    border: 2px solid var(--primaryColor);
     padding: auto 0;
+    margin-top: 10px;
   }
     .hero-logo{
     height: 300px;
     padding: 0;
     margin: 0 0 10px 0;
     width: 100%;
-    border-radius: 0;
     animation: none;
-    border-top: 2px solid var(--primaryColor);
+    border-top: 2px solid var();
     border-radius: 10px;
   }
     .hero-heading {
