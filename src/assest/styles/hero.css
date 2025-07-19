@@ -2,9 +2,7 @@
 /* ---------- Hero Section ---------- */
   @keyframes bounce {
   0% { transform: scale(1); }
-  /* 25% { transform: scale(1.1); } */
   50% { transform: scale(1.1); }
-  /* 75% { transform: scale(1.1); } */
   100% { transform: scale(1); }
 
 }
@@ -68,7 +66,6 @@
     margin-top: 0px;
     font-family: 'Playfair Display', serif;
     margin-bottom: 0px;
-
   }
   
   .hero-description {
@@ -76,6 +73,7 @@
     max-width: 600px;
     margin: 10px auto;
     color: rgb(209, 209, 209);
+    
   }
   
   .hero-btn {
@@ -86,6 +84,7 @@
     font-size: 18px;
     color: #fff;
     display: inline-block;
+    
   }
   
   .hero-btn:hover {

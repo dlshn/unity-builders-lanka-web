@@ -6,10 +6,12 @@ import logo from "../assest/logo.jpg";
 
 export const Hero = () => {
   return (
+
     <section className="hero d-flex align-items-center">
       <div className="container-fluid text-center px-0">
         <img src={logo} alt="Unity Builders Lanka logo " className="hero-logo mt-0" data-aos="flip-left" />
         <h1 className="hero-heading">
+
           <Typewriter
             options={{
               strings: ["Unity Builders Lanka"],
