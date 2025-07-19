@@ -129,6 +129,8 @@
     width: 100%;
     border-radius: 0;
     animation: none;
+    border-top: 2px solid var(--primaryColor);
+    border-radius: 10px;
   }
     .hero-heading {
       font-size: 40px;
