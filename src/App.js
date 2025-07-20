@@ -15,6 +15,10 @@ import AddPackageForm from './pages/PackageAdd';
 import ProjectAdd from './pages/ProjectAdd';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import UpdatePackage from "./pages/UpdatePackage";
+
+
+
 import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 
 
@@ -48,6 +52,7 @@ function App() {
           <Route path="/ProjectAdd" element={<ProjectAdd />} />
           <Route path="/AdminLogin" element={<AdminLogin />} />
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
+          <Route path="/update-package/:id" element={<UpdatePackage />} />
           
         </Routes>
         <Footer />

@@ -10,31 +10,36 @@
 }
 
 /* Optional: Slight delay to create staggered bouncing */
-.c1,.card-body1 {
+.c1,.card-body1 h5 {
   animation: modernBounce 3s ease-in-out infinite;
   animation-delay: 0s;
 }
-.c2,.card-body2 {
+.c2,.card-body2 h5{
   animation: modernBounce 3s ease-in-out infinite;
   animation-delay: 0.75s;
 }
-.c3,.card-body3 {
+.c3,.card-body3 h5{
   animation: modernBounce 3s ease-in-out infinite;
   animation-delay: 1.5s;
 }
-.c4,.card-body4 {
+.c4,.card-body4 h5{
   animation: modernBounce 3s ease-in-out infinite;
   animation-delay: 2.25s;
 }
 
 
 .admin-dashboard {
+  background-image: url("../Background_images/admin-bg.jpg");
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #1c3d65, #375983, #7389b9);
+  background-blend-mode: overlay;
+  background-color: rgba(28, 61, 101, 0.8); /* Optional overlay */
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .dash-card {
   width: 180px;

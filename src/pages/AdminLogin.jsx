@@ -27,7 +27,7 @@ const AdminLogin = () => {
       
       const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/verify-otp`, { email, otp });
       localStorage.setItem("admin_token", res.data.token);
-      setMessage("Login successful!");
+      window.dispatchEvent(new Event("authChange"));
       navigate("/AdminDashboard"); // Redirect to admin dashboard
 
       // optionally redirect or refresh
