@@ -13,6 +13,8 @@ export const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [packageData, setPackageData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(6);
+
 
   const token = localStorage.getItem("admin_token");
   const navigate = useNavigate();
@@ -64,6 +66,11 @@ export const Packages = () => {
     navigate(`/update-package/${pkg._id}`);
   };
 
+  const handleSeeMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
+
+
   return (
     <>
       <section className="packages">
@@ -76,7 +83,7 @@ export const Packages = () => {
             {loading ? (
               <p className="text-center">Loading packages...</p>
             ) : (
-              packageData.map((pkg) => (
+              packageData.slice(0, visibleCount).map((pkg) => (
                 <div className="box" data-aos="zoom-in" key={pkg._id}>
                   <div className="img">
                     <img src={pkg.urls[0]} alt={pkg.title} />
@@ -109,6 +116,14 @@ export const Packages = () => {
               ))
             )}
           </div>
+          {visibleCount < packageData.length && (
+            <div className="text-center mt-4">
+              <button className="btn btn-primary" onClick={handleSeeMore}>
+                See More
+              </button>
+            </div>
+          )}
+
         </div>
 
         <Modal
