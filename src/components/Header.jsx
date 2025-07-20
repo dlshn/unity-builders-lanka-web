@@ -27,6 +27,21 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleAuthChange = () => {
+      const token = localStorage.getItem("admin_token");
+      setIsLoggedIn(!!token);
+    };
+
+    window.addEventListener("authChange", handleAuthChange);
+    handleAuthChange(); // run on mount
+
+    return () => {
+      window.removeEventListener("authChange", handleAuthChange);
+    };
+  }, []);
+
+
   const handleLogout = () => {
     localStorage.removeItem("admin_token");
     setIsLoggedIn(false);
@@ -48,7 +63,11 @@ export const Header = () => {
 
         {/* Navigation Links */}
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)} className="item">Home</Link> 
+          {!isLoggedIn ? (
+            <Link to="/" onClick={() => setMenuOpen(false)} className="item">Home</Link>
+          ) : (
+            <Link to="/AdminDashboard" onClick={() => setMenuOpen(false)} className="item">Admin Dashboard</Link>
+          )} 
           <Link to="/Packages" onClick={() => setMenuOpen(false)} className="item">House Packages</Link>
           <Link to="/Project" onClick={() => setMenuOpen(false)} className="item">Ongoing Projects</Link>
           <Link to="/About" onClick={() => setMenuOpen(false)} className="item">About Us</Link>

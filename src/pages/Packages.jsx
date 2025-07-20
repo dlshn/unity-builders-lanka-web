@@ -7,6 +7,7 @@ import "../assest/styles/Package.css";
 
 Modal.setAppElement("#root");
 
+
 export const Packages = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState(null);

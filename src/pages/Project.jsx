@@ -22,6 +22,30 @@ export const Project = () => {
     fetchProjects();
   }, []);
 
+  const deleteProject = async (projectId) => {
+    try {
+      const token = localStorage.getItem("admin_token");
+
+      if (!token) {
+        alert("Unauthorized. Please log in.");
+        return;
+      }
+
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/projects/delete/${projectId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      // Remove deleted project from UI
+      setProjects(projects.filter((project) => project._id !== projectId));
+    } catch (error) {
+      console.error("Failed to delete project", error);
+      alert("Failed to delete the project.");
+    }
+  };
+
+
   return (
     <section className="projects-section">
       <Heading title="Latest Projects" data-aos="fade-down" />
@@ -64,7 +88,18 @@ export const Project = () => {
                 <a href={item.location} type="button" className="location-btn btn mb-2" data-aos="fade-right">
                   Location
                 </a>
+                {localStorage.getItem("admin_token") && (
+                  <button
+                    onClick={() => deleteProject(item._id)}
+                    className="btn btn-sm btn-danger my-2 delete-btn"
+                    style={{ borderRadius: "8px", width: "100%" }}
+                  >
+                    Delete
+                  </button>
+                )}
               </div>
+              
+
             </div>
           ))}
         </div>
