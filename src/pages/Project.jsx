@@ -23,6 +23,8 @@ export const Project = () => {
   }, []);
 
   const deleteProject = async (projectId) => {
+    const confirm = window.confirm("Are you sure you want to delete this package?");
+    if (!confirm) return;
     try {
       const token = localStorage.getItem("admin_token");
 
