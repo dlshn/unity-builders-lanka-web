@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Heading } from "../components/Heading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { HiLocationMarker } from "react-icons/hi";
@@ -7,6 +8,8 @@ import axios from "axios";
 
 export const Project = () => {
   const [projects, setProjects] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(6);
+
 
   // Fetch data from MongoDB via your backend API
   useEffect(() => {
@@ -23,29 +26,33 @@ export const Project = () => {
   }, []);
 
   const deleteProject = async (projectId) => {
-    const confirm = window.confirm("Are you sure you want to delete this package?");
-    if (!confirm) return;
+    const confirmDelete = window.confirm("Are you sure you want to delete this project?");
+    if (!confirmDelete) return;
+
+    const token = localStorage.getItem("admin_token");
+
+    if (!token) {
+      alert("Unauthorized. Please log in.");
+      return;
+    }
+
     try {
-      const token = localStorage.getItem("admin_token");
-
-      if (!token) {
-        alert("Unauthorized. Please log in.");
-        return;
-      }
-
       await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/projects/delete/${projectId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { Authorization: `Bearer ${token}` },
       });
 
-      // Remove deleted project from UI
-      setProjects(projects.filter((project) => project._id !== projectId));
+      setProjects((prev) => prev.filter((project) => project._id !== projectId));
     } catch (error) {
-      console.error("Failed to delete project", error);
-      alert("Failed to delete the project.");
+      console.error("❌ Failed to delete project:", error);
+      alert("Failed to delete the project. Please try again.");
     }
   };
+
+  const handleSeeMore = () => {
+    setVisibleCount(prevCount => prevCount + 6);
+  };
+
+
 
 
   return (
@@ -53,7 +60,7 @@ export const Project = () => {
       <Heading title="Latest Projects" data-aos="fade-down" />
       <div className="container">
         <div className="row g-4 d-flex align-items-center justify-content-between">
-          {projects.map((item) => (
+          {projects.slice(0, visibleCount).map((item) => (
             <div key={item._id} className="col-lg-4 col-md-6 col-sm-12">
               <div className="project-outer d-flex flex-column align-items-center">
                 <div className="project-box" data-aos={item._id % 2 === 0 ? "fade-right" : "fade-left"}>
@@ -104,10 +111,18 @@ export const Project = () => {
 
             </div>
           ))}
+          {visibleCount < projects.length && (
+            <div className="text-center mt-4">
+              <button onClick={handleSeeMore} className="btn btn-primary">
+                See More
+              </button>
+            </div>
+          )}
+
         </div>
 
         <div className="text-center mt-4">
-          <a href="contact" className="project-btn">Contact Us</a>
+          <Link to="/contact" className="project-btn">Contact Us</Link>
         </div>
       </div>
     </section>
