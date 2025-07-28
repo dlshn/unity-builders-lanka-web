@@ -44,52 +44,65 @@ const PackageAdd = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setMessage("");
-    setLoading(true);
+  e.preventDefault();
+  setMessage("");
+  setLoading(true);
 
-    try {
-      const imageUrls = [];
-      for (let img of images) {
-        if (!img) throw new Error("All 4 images are required.");
-        const url = await uploadImage(img);
-        imageUrls.push(url);
-      }
-
-      const res = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/packages/create`,
-        { ...form, urls: imageUrls },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("admin_token")}`
-          }
-        }
-      );
-
-      setMessage(res.data.message || "Package added successfully!");
-
-      setForm({
-        title: "",
-        description: "",
-        price: "",
-        Square_feets: "",
-        bedrooms_ground_floor: "",
-        bedrooms_first_floor: "",
-        bedrooms_second_floor: "",
-        bathrooms_ground_floor: "",
-        bathrooms_first_floor: "",
-        bathrooms_second_floor: "",
-        urls: [],
-      });
-
-      setImages([null, null, null, null]);
-    } catch (err) {
-      console.error(err);
-      setMessage("Failed to post package.");
+  try {
+    const imageUrls = [];
+    for (let img of images) {
+      if (!img) throw new Error("All 4 images are required.");
+      const url = await uploadImage(img);
+      imageUrls.push(url);
     }
 
-    setLoading(false);
-  };
+    // Convert numeric fields explicitly
+    const payload = {
+      ...form,
+      price: Number(form.price),
+      Square_feets: Number(form.Square_feets),
+      bedrooms_ground_floor: Number(form.bedrooms_ground_floor),
+      bedrooms_first_floor: Number(form.bedrooms_first_floor),
+      bedrooms_second_floor: Number(form.bedrooms_second_floor),
+      bathrooms_ground_floor: Number(form.bathrooms_ground_floor),
+      bathrooms_first_floor: Number(form.bathrooms_first_floor),
+      bathrooms_second_floor: Number(form.bathrooms_second_floor),
+      urls: imageUrls,
+    };
+
+    const res = await axios.post(
+      `${process.env.REACT_APP_API_BASE_URL}/api/packages/create`,
+      payload,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("admin_token")}`
+        }
+      }
+    );
+
+    setMessage(res.data.message || "Package added successfully!");
+    setForm({
+      title: "",
+      description: "",
+      price: "",
+      Square_feets: "",
+      bedrooms_ground_floor: "",
+      bedrooms_first_floor: "",
+      bedrooms_second_floor: "",
+      bathrooms_ground_floor: "",
+      bathrooms_first_floor: "",
+      bathrooms_second_floor: "",
+      urls: [],
+    });
+    setImages([null, null, null, null]);
+  } catch (err) {
+    console.error(err);
+    setMessage("Failed to post package.");
+  }
+
+  setLoading(false);
+};
+
 
   return (
     <div className="package-form-bg min-vh-100 py-5 ">
