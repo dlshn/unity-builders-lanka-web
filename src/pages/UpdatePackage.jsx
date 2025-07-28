@@ -26,18 +26,30 @@ const UpdatePackage = () => {
   };
 
   const handleUpdate = async (e) => {
-    e.preventDefault();
-    const token = localStorage.getItem("admin_token");
+  e.preventDefault();
+  const token = localStorage.getItem("admin_token");
 
-    try {
-      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/api/packages/update/${id}`, form, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      navigate("/Packages");
-    } catch (err) {
-      console.error("Update failed", err);
-    }
+  // Convert numeric fields to actual numbers
+  const payload = {
+    ...form,
+    price: Number(form.price),
+    Square_feets: Number(form.Square_feets),
   };
+
+  try {
+    await axios.put(
+      `${process.env.REACT_APP_API_BASE_URL}/api/packages/update/${id}`,
+      payload,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    navigate("/Packages");
+  } catch (err) {
+    console.error("Update failed", err);
+  }
+};
+
 
   return (
     <div className="update-form-bg min-vh-100 py-5">
