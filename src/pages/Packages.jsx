@@ -135,7 +135,7 @@ export const Packages = () => {
         >
           {selectedPackage && (
             <div className="modal-content">
-              <button className="close-btn" onClick={closeModal}>
+              <button className="close-btn" onClick={closeModal}> 
                 X
               </button>
               <h2>
