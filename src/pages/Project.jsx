@@ -63,7 +63,7 @@ export const Project = () => {
           {projects.slice(0, visibleCount).map((item) => (
             <div key={item._id} className="col-lg-4 col-md-6 col-sm-12">
               <div className="project-outer d-flex flex-column align-items-center">
-                <div className="project-box" data-aos={item._id % 2 === 0 ? "fade-right" : "fade-left"}>
+                <div className="project-box" >
                   <div id={`carouselExample${item._id}`} className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                       {item.urls.map((image, index) => (
@@ -82,21 +82,22 @@ export const Project = () => {
                     </button>
                   </div>
                 </div>
-                <div className="d-flex flex-column align-items-center" data-aos="fade-left">
-                  
-                  <div className="d-flex flex-row">
+                <div className="d-flex flex-row">
                     <HiLocationMarker className="text-dark m-auto fs-3" />
-                    <h4 className="location-text text-dark mt-2 mx-2">{item.title}</h4>
-                  </div>
-                  <h6 className="updated-date text-dark mt-1 mx-2">
-                    Updated: {new Date(item.updatedAt).toLocaleDateString()}
-                  </h6>
-                  
+                    <h4 className="location-text mt-2 mx-2">{item.title}</h4>
                 </div>
+                <div class="d-flex justify-content-between gap-3 align-items-center  mx-3 mb-2" >
 
-                <a href={item.location} type="button" className="location-btn btn mb-2" data-aos="fade-right">
-                  Location
-                </a>
+                  <a href={item.location} type="button" className="location-btn btn" >
+                    Location
+                  </a>
+
+                  <h6 className="updated-date">
+                    Last Update: {new Date(item.updatedAt).toLocaleDateString()}
+                  </h6>
+
+                </div>
+                
                 {localStorage.getItem("admin_token") && (
                   <button
                     onClick={() => deleteProject(item._id)}

@@ -81,6 +81,11 @@
   .location-text{
     font-size: 1.5rem;
     font-weight: bold;
+    color: #003e8a;
+  }
+  .updated-date{
+    color: #5c6a7b;
+    font-size: 1.1rem;
   }
   /* Overlay */
   /* .overlay {
@@ -113,7 +118,7 @@
   .location-btn:hover{
     background: white;
     color: #003e8a;
-    border: #003e8a 2px solid;
+    border: #003e8a 1px solid;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
   }
   
@@ -159,11 +164,15 @@
     .location-btn{
       font-size: 0.9rem;
     }
+    .updated-date{
+      font-size: 1rem;
+    }
   }
   @media (max-width: 992px) {
     .project-img {
       height: 25vh;
     }
+    
     
   }
 
@@ -178,16 +187,21 @@
     .project-img {
       height: 35vh;
     }
+    
   }
   @media (max-width: 575px){
     .project-img {
       height: 25vh;
     }
+    
   }
 
   @media (max-width: 480px) {
     .location-text {
       font-size: 1rem;
+    }
+    .project-img {
+      height: 20vh;
     }
     
     .project-btn {
@@ -197,15 +211,27 @@
     .location-btn{
       font-size: 0.8rem;
     }
+    .location-text{
+      font-size: 1.2rem;
+    }
     .delete-btn{
       font-size: 0.8rem;
       
+    }
+    .updated-date{
+      font-size: 0.8rem;
     }
   }
 
   @media (max-width: 414px){
     .project-img {
       height: 18vh;
+    }
+    .location-text {
+      font-size: 1rem;
+    }
+    .updated-date{
+      font-size: 0.7rem;
     }
   }
   
