@@ -62,7 +62,7 @@ export const Project = () => {
         <div className="row g-4 d-flex align-items-center justify-content-between">
           {projects.slice(0, visibleCount).map((item) => (
             <div key={item._id} className="col-lg-4 col-md-6 col-sm-12">
-              <div className="project-outer d-flex flex-column align-items-center">
+              <div className="project-outer d-flex flex-column align-items-center" data-aos="zoom-in">
                 <div className="project-box" >
                   <div id={`carouselExample${item._id}`} className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
