@@ -16,16 +16,12 @@ import ProjectAdd from './pages/ProjectAdd';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import UpdatePackage from "./pages/UpdatePackage";
-
-
+import Interior_3D from './pages/Interior_3D';
 
 import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 
-
-
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-
 
 function App() {  
   useEffect(() => {  // for AOS animations
@@ -53,6 +49,7 @@ function App() {
           <Route path="/AdminLogin" element={<AdminLogin />} />
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/update-package/:id" element={<UpdatePackage />} />
+          <Route path="/Interior_3D" element={<Interior_3D />} />
           
         </Routes>
         <Footer />
