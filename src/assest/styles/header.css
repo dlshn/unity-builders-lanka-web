@@ -38,7 +38,11 @@
   .nav-links {
     display: none;  
   }
-  
+  .nav-links .item{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+   
+  }
   /* Show menu when active  */
   .nav-links.active {
     display: flex;
@@ -74,10 +78,13 @@
     font-size: large;
     text-decoration: underline;
     transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px ;
   }
   
   .nav-links a:hover {
     color: #072b7e;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   /* menu icon */
   .menu-icon {
@@ -100,7 +107,7 @@
     }
     .nav-links {
       display: flex !important;
-      gap: 35px;
+      gap: 30px;
     } 
     .menu-icon {
       display: none;
