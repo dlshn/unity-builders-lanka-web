@@ -1,9 +1,12 @@
 import React from 'react'
+import InteriorTemplate from '../components/InteriorTemplate'
 
-const Interior_3D = () => {
+const Interior = () => {
   return (
-    <div>Interior_3D</div>
+    <div>
+      <InteriorTemplate />
+    </div>
   )
 }
 
-export default Interior_3D
+export default Interior

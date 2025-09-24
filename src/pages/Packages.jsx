@@ -81,7 +81,12 @@ export const Packages = () => {
         <div className="container">
           <div className="content grid3">
             {loading ? (
-              <p className="text-center">Loading packages...</p>
+              <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "300px" }}>
+                <div className="spinner-border text-info" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div>
+
             ) : (
               packageData.slice(0, visibleCount).map((pkg) => (
                 <div className="box" data-aos="zoom-in" key={pkg._id}>

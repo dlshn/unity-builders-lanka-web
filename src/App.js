@@ -17,6 +17,7 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import UpdatePackage from "./pages/UpdatePackage";
 import Interior_3D from './pages/Interior_3D';
+import InteriorAdd from './pages/InteriorAdd'; // Import the new InteriorAdd page
 
 import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/update-package/:id" element={<UpdatePackage />} />
           <Route path="/Interior_3D" element={<Interior_3D />} />
+          <Route path="/InteriorAdd" element={<InteriorAdd />} /> 
           
         </Routes>
         <Footer />

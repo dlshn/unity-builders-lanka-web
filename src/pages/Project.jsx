@@ -9,6 +9,7 @@ import axios from "axios";
 export const Project = () => {
   const [projects, setProjects] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
+  const [loading, setLoading] = useState(true);
 
 
   // Fetch data from MongoDB via your backend API
@@ -19,6 +20,8 @@ export const Project = () => {
         setProjects(res.data);
       } catch (err) {
         console.error("Error fetching projects", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -60,7 +63,15 @@ export const Project = () => {
       <Heading title="Latest Projects" data-aos="fade-down" />
       <div className="container">
         <div className="row g-4 d-flex align-items-center justify-content-between">
-          {projects.slice(0, visibleCount).map((item) => (
+          { loading ? (
+              <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "300px" }}>
+                <div className="spinner-border text-info" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div>
+
+            ) : (
+            projects.slice(0, visibleCount).map((item) => (
             <div key={item._id} className="col-lg-4 col-md-6 col-sm-12">
               <div className="project-outer d-flex flex-column align-items-center" data-aos="zoom-in">
                 <div className="project-box" >
@@ -111,7 +122,9 @@ export const Project = () => {
               
 
             </div>
-          ))}
+          ))
+        )
+          }
           {visibleCount < projects.length && (
             <div className="text-center mt-4">
               <button onClick={handleSeeMore} className="btn btn-primary">
