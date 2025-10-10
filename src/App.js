@@ -11,13 +11,13 @@ import {Packages} from './pages/Packages';
 import {Project}  from './pages/Project';
 import { Contact } from './pages/Contact';
 import { Footer } from './components/Footer';
-import AddPackageForm from './pages/PackageAdd';
-import ProjectAdd from './pages/ProjectAdd';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
-import UpdatePackage from "./pages/UpdatePackage";
+import AddPackageForm from './pages/Admin/PackageAdd';
+import ProjectAdd from './pages/Admin/ProjectAdd';
+import AdminLogin from './pages/Admin/AdminLogin';
+import AdminDashboard from './pages/Admin/AdminDashboard';
+import UpdatePackage from "./pages/Admin/UpdatePackage";
 import Interior_3D from './pages/Interior_3D';
-import InteriorAdd from './pages/InteriorAdd'; // Import the new InteriorAdd page
+import InteriorAdd from './pages/Admin/InteriorAdd'; // Import the new InteriorAdd page
 
 import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../assest/styles/PackageAdd.css"; // For custom gradient background
+import "../../assest/styles/PackageAdd.css"; // For custom gradient background
 
 const PackageAdd = () => {
   const [form, setForm] = useState({

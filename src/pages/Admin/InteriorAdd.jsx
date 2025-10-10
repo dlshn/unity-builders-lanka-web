@@ -48,7 +48,7 @@ const CreateInterior = () => {
     e.preventDefault();
     try {
       const uploadedUrls = await uploadImages();
-      await axios.post("http://localhost:5000/api/templates", {
+      await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/interior`, {
         ...formData,
         properties: uploadedUrls
       });
