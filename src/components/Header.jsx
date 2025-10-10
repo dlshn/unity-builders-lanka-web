@@ -62,7 +62,7 @@ export const Header = () => {
         </button>
 
         {/* Navigation Links */}
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <div className={`nav-links ${menuOpen ? "active" : ""} ${isScrolled ? "scrolled" : ""}`}>
           {!isLoggedIn ? (
             <Link to="/" onClick={() => setMenuOpen(false)} className="item">Home</Link>
           ) : (

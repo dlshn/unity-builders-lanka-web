@@ -64,8 +64,8 @@ const ProjectAdd = () => {
   };
 
   return (
-    <div className="project-form-bg">
-      <div className="card p-4 shadow" style={{ maxWidth: "700px",width:"80%", margin: "auto" }}>
+    <div className="project-form-bg bg-secondary"> 
+      <div className="container bg-white p-4 shadow" style={{ maxWidth: "700px",width:"80%", margin: "auto" }}>
         <h2 className="text-center mb-4">Add New Project</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">

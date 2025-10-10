@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../../assest/styles/PackageAdd.css"; // For custom gradient background
 
 const PackageAdd = () => {
   const [form, setForm] = useState({
@@ -105,8 +104,8 @@ const PackageAdd = () => {
 
 
   return (
-    <div className="package-form-bg min-vh-100 py-5 ">
-      <div className="card shadow-lg p-4 mx-auto mt-5" style={{ maxWidth: "800px", width: "80%" }}>
+    <div className="package-form-bg min-vh-100 py-5 bg-secondary">
+      <div className="container bg-white shadow-lg p-4 mx-auto mt-5" style={{ maxWidth: "800px", width: "80%" }}>
         <h2 className="text-center mb-4">Add New House Package</h2>
         <form onSubmit={handleSubmit}>
           <div className="row g-3">

@@ -69,8 +69,8 @@ const CreateInterior = () => {
   };
 
   return (
-    <div className="bg-" style={{ minHeight: "100vh", padding: "6rem 0" }}>
-      <div className="container mt-0 bg-white py-5 ">
+    <div className="bg-secondary" style={{ minHeight: "100vh", padding: "6rem 0" }}>
+      <div className="container mt-0 bg-white py-5 px-5">
         <h2 className="my-4 text-center fw-bold">Create Interior Design</h2>
         <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center">
           <div className="row mb-3">
