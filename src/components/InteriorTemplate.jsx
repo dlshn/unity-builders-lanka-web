@@ -2,43 +2,46 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const InteriorTemplate = ({ index = 0 }) => {
-  const [templates, setTemplates] = useState([]);
+  const [Interior, setInterior] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(index);
   const [loading, setLoading] = useState(true);
 
   // Fetch templates from backend
   useEffect(() => {
-    const fetchTemplates = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/api/templates"); // 👈 update with your API URL
-        setTemplates(res.data);
-        setLoading(false);
-      } catch (err) {
-        console.error("Error fetching templates:", err);
-        setLoading(false);
-      }
-    };
-    fetchTemplates();
-  }, []);
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/interior/getAll`);
+      setInterior(res.data);
+    } catch (err) {
+      console.error("Error fetching interior designs", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchData();
+}, []);
+
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % templates.length);
+    setCurrentIndex((prev) => (prev + 1) % Interior.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? templates.length - 1 : prev - 1
+      prev === 0 ? Interior.length - 1 : prev - 1
     );
   };
 
   if (loading) return <p className="text-center">Loading templates...</p>;
-  if (!templates.length) return <p className="text-center">No templates found.</p>;
+  if (!Interior.length) return <p className="text-center">No templates found.</p>;
 
-  const currentTemplate = templates[currentIndex];
+  const currentTemplate = Interior[currentIndex];
+  const frontImage = currentTemplate.urls[0];
+  const interiorImages = currentTemplate.urls.slice(1);
 
   return (
-    <div className="container p-4 rounded-2xl shadow-lg bg-white my-4">
-      <h2 className="text-xl fw-bold mb-3 text-center">{currentTemplate.name}</h2>
+    <div className="container sm:p-4 rounded-2xl bg-transparent my-3">
+      <h2 className="text-xl fw-bold mb-3 text-center border py-2 bg-secondary">{currentTemplate.name}</h2>
 
       {/* Template Details */}
       <div className="text-center mb-4">
@@ -50,16 +53,29 @@ const InteriorTemplate = ({ index = 0 }) => {
       </div>
 
       {/* Images */}
-      <div className="row g-3">
-        {currentTemplate.properties.map((img, i) => (
-          <div key={i} className="col-12 col-sm-6 col-md-4">
-            <img
-              src={img}
-              alt={currentTemplate.name}
-              className="img-fluid rounded shadow"
-            />
+      <div className="row align-items-start g-3">
+        <div className="col-12 col-sm-6 text-center">
+          <img
+            src={frontImage}
+            alt={`${currentTemplate.name} Front View`}
+            className="img-fluid rounded shadow mb-3"
+            style={{ maxHeight: "400px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="col-sm-6">
+          <div className="row g-3">
+            {interiorImages.map((img, idx) => (
+              <div key={idx} className="col-6 text-center">
+                <img
+                  src={img}
+                  alt={`${currentTemplate.name} Interior ${idx + 1}`}
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "190px", objectFit: "cover" }}
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* Controls */}
