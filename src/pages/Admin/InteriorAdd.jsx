@@ -10,7 +10,7 @@ const CreateInterior = () => {
     price: "",
     bedrooms: "",
     baths: "",
-    properties: [] // uploaded image URLs
+    urls: [] // uploaded image URLs
   });
   const [images, setImages] = useState([]); // selected files
   const [uploading, setUploading] = useState(false);
@@ -48,9 +48,9 @@ const CreateInterior = () => {
     e.preventDefault();
     try {
       const uploadedUrls = await uploadImages();
-      await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/interior`, {
+      await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/interior/create`, {
         ...formData,
-        properties: uploadedUrls
+        urls: uploadedUrls
       });
 
       alert("Template created successfully!");
@@ -59,7 +59,7 @@ const CreateInterior = () => {
         price: "",
         bedrooms: "",
         baths: "",
-        properties: []
+        urls: []
       });
       setImages([]);
     } catch (err) {
@@ -69,80 +69,117 @@ const CreateInterior = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="mb-4 text-center">Create Interior Template</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="form-control"
-          />
-        </div>
+    <div className="bg-" style={{ minHeight: "100vh", padding: "6rem 0" }}>
+      <div className="container mt-0 bg-white py-5 ">
+        <h2 className="my-4 text-center fw-bold">Create Interior Design</h2>
+        <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center">
+          <div className="row mb-3">
+            <div className="col-md-6 mb-3">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="form-control w-100"
+              />
+            </div>
 
-        <div className="mb-3">
-          <label className="form-label">Price</label>
-          <input
-            type="text"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            required
-            className="form-control"
-          />
-        </div>
-
-        <div className="row mb-3">
-          <div className="col-md-6">
-            <label className="form-label">Bedrooms</label>
-            <input
-              type="number"
-              name="bedrooms"
-              value={formData.bedrooms}
-              onChange={handleChange}
-              required
-              className="form-control"
-            />
+            <div className="col-md-6 mb-3">
+              <label className="form-label">Price</label>
+              <input
+                type="text"
+                name="price"
+                value={formData.price}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
           </div>
-          <div className="col-md-6">
-            <label className="form-label">Baths</label>
-            <input
-              type="number"
-              name="baths"
-              value={formData.baths}
-              onChange={handleChange}
-              required
-              className="form-control"
-            />
-          </div>
-        </div>
 
-        <div className="mb-3">
-          <label className="form-label">Images</label>
-          <input
+          <div className="row mb-3">
+            <div className="col-md-6">
+              <label className="form-label">Bedrooms</label>
+              <input
+                type="number"
+                name="bedrooms"
+                value={formData.bedrooms}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="col-md-6">
+              <label className="form-label">Baths</label>
+              <input
+                type="number"
+                name="baths"
+                value={formData.baths}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+          </div>
+
+          <div>
+            <lable className="form-label">Front 3D</lable>
+            <input
             type="file"
-            multiple
             accept="image/*"
-            onChange={handleFileChange}
             className="form-control"
-          />
-          {images.length > 0 && (
-            <small className="text-muted">{images.length} file(s) selected</small>
-          )}
+            onChange={(e) => setImages([e.target.files[0]])}
+            required
+            />
+          {images[0] && (
+            <img
+              src={URL.createObjectURL(images[0])}
+              alt="Front 3D Preview"
+              className="img-thumbnail mt-2"
+              style={{ height: "150px", objectFit: "cover" }}
+            />
+          )} 
+          </div>
+
+
+          <div className="mb-3">
+            <label className="form-label">Images</label>
+            <input
+              type="file"
+              multiple
+              accept="image/*"
+              onChange={handleFileChange}
+              className="form-control"
+            />
+            {images.length > 0 && (
+              <small className="text-muted">{images.length} file(s) selected</small>
+            )}
+            {images.length > 0 && (
+              <div className="mt-2">
+                {images.slice(1).map((img, i) => (
+                  <img
+                    key={i}
+                    src={URL.createObjectURL(img)}
+                    alt={`Preview ${i + 1}`}
+                    className="img-thumbnail me-2"
+                    style={{ height: "100px", objectFit: "cover" }}
+                  />
+                ))}
+              </div>
+            )}
         </div>
 
-        <button
-          type="submit"
-          disabled={uploading}
-          className="btn btn-primary"
-        >
-          {uploading ? "Uploading..." : "Create Template"}
-        </button>
-      </form>
+          <button
+            type="submit"
+            disabled={uploading}
+            className="btn btn-primary w-25 mx-auto"
+          >
+            {uploading ? "Uploading..." : "Create Template"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

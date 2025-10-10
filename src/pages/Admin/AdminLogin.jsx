@@ -39,12 +39,12 @@ const AdminLogin = () => {
   return (
         <div className="admin-login-bg">
          <div className="login-card d-flex flex-column align-items-center">
-            <h2 className="text-center text-dark">- Admin Login -</h2>
-            <p className="text-center text-danger">*Only authorized admins can login</p>
+            <h2 className="text-center text-dark fw-bold">- Admin Login -</h2>
+            <p className="text-center text-danger mb-0">*Only authorized admins can login</p>
 
             {step === 1 && (
                 <>
-                <label className="">Email :</label>
+                <label className="mt-0">Email :</label>
                 <input
                     type="email"
                     className="form-control mb-3"
