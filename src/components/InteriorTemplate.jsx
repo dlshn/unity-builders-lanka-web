@@ -49,7 +49,7 @@ const InteriorTemplate = ({ index = 0 }) => {
 
   // ✅ Show message if no data
   if (!interior.length) {
-    return <p className="text-center">No templates found.</p>;
+    return <p className="text-center text-white">No interior designs found.</p>;
   }
 
   // ✅ Safe data access after loading
