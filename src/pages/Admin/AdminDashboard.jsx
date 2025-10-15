@@ -22,20 +22,20 @@ const AdminDashboard = () => {
                 <small>(Add Budget Houses)</small>
             </div>
             </div>
-            <div className="dash-card c2" onClick={() => navigate("/InteriorAdd")}>
-            <div className="card-body2 d-flex flex-column align-items-center justify-content-center">
+            <div className="dash-card c3" onClick={() => navigate("/InteriorAdd")}>
+            <div className="card-body3 d-flex flex-column align-items-center justify-content-center">
                 <h5>Add Interior</h5>
                 <small>(Add Interior Designs)</small>
             </div>
             </div>
 
-            <div className="dash-card c3" onClick={() => navigate("/Project")}>
-            <div className="card-body3 d-flex align-items-center justify-content-center">
+            <div className="dash-card c4" onClick={() => navigate("/Project")}>
+            <div className="card-body4 d-flex align-items-center justify-content-center">
                 <h5>Project Update</h5>
             </div>
             </div>
-            <div className="dash-card c4" onClick={() => navigate("/Packages")}>
-            <div className="card-body4 d-flex align-items-center justify-content-center">
+            <div className="dash-card c5" onClick={() => navigate("/Packages")}>
+            <div className="card-body5 d-flex align-items-center justify-content-center">
                 <h5>Package Update</h5>
             </div>
             </div>
