@@ -1,80 +1,129 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "../assest/styles/InteriorTemplate.css";
 
-const templates = [
-  {
-    id: 0,
-    title: "Modern Living Room",
-    images: [
-      "https://res.cloudinary.com/dh52yqjyq/image/upload/v1753725941/hg0sngkynwxfsqpzqzaw.jpg",
-      "https://res.cloudinary.com/dh52yqjyq/image/upload/v1753725942/lml2270i2tenzqyqef7s.jpg",
-      "https://res.cloudinary.com/dh52yqjyq/image/upload/v1753725795/c5dakawpeemk6wduv3fq.jpg",
-      "https://res.cloudinary.com/dh52yqjyq/image/upload/v1753725679/hi6ekxcah5l6wgq255tz.jpg",
-      "https://res.cloudinary.com/dh52yqjyq/image/upload/v1753725449/n5jzsmi2hca4iass1vvs.jpg"
-    ],
-  },
-  {
-    id: 1,
-    title: "Luxury Bedroom",
-    images: [
-      "https://via.placeholder.com/400x250?text=Bedroom+1",
-      "https://via.placeholder.com/400x250?text=Bedroom+2",
-      "https://via.placeholder.com/400x250?text=Bedroom+3",
-    ],
-  },
-  {
-    id: 2,
-    title: "Office Interior",
-    images: [
-      "https://via.placeholder.com/400x250?text=Office+1",
-      "https://via.placeholder.com/400x250?text=Office+2",
-    ],
-  },
-];
+const InteriorTemplate = ({ index = 0 }) => {
+  const [Interior, setInterior] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(index);
+  const [loading, setLoading] = useState(true);
 
-const InteriorTemplate = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Fetch templates from backend
+  useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/interior/getAll`);
+      setInterior(res.data);
+    } catch (err) {
+      console.error("Error fetching interior designs", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchData();
+}, []);
+
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % templates.length);
+    setCurrentIndex((prev) => (prev + 1) % Interior.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? templates.length - 1 : prev - 1
+      prev === 0 ? Interior.length - 1 : prev - 1
     );
   };
 
-  const currentTemplate = templates[currentIndex];
+  if (loading) return <p className="text-center">Loading templates...</p>;
+  if (!Interior.length) return <p className="text-center">No templates found.</p>;
+
+  const currentTemplate = Interior[currentIndex];
+  const frontImage = currentTemplate.urls[0];
+  const top4Images = currentTemplate.urls.slice(1, 5);
+  const otherImages = currentTemplate.urls.slice(5);
 
   return (
-    <div className="container p-4 rounded-2xl shadow-lg bg-white my-4">
-      <h2 className="text-xl fw-bold mb-4 text-center">
-        {currentTemplate.title}
-      </h2>
+    <div className="container sm:p-4 rounded-2xl bg-transparent my-3">
+      <h2 className="text-xl fw-bold mb-3 text-center border py-2 bg-secondary">{currentTemplate.name}</h2>
 
-      <div className="row g-3">
-        {currentTemplate.images.map((img, i) => (
-          <div key={i} className="col-12 col-sm-6 col-md-4">
-            <img
-              src={img}
-              alt={currentTemplate.title}
-              className="img-fluid rounded shadow"
-            />
-          </div>
-        ))}
+      {/* Template Details */}
+      <div className="mb-4 d-flex flex-column flex-sm-row align-items-center justify-content-center mx-auto gap-2">
+        <h2 className="mb-1 border py-2 w-100 w-sm-50 subHeader"><strong>{currentTemplate.price}</strong>  lacks</h2>
+        <h2 className="mb-1 border py-2 w-100 w-sm-50 subHeader">
+          <strong>Bedrooms:</strong> {currentTemplate.bedrooms} |{" "}
+          <strong>Baths:</strong> {currentTemplate.baths}
+        </h2>
       </div>
 
+      {/* Images */}
+      <div className="row align-items-center justify-content-center g-3">
+        <div className="col-12 col-sm-6 text-center align-items-center justify-content-center">
+          <img
+            src={frontImage}
+            alt={`${currentTemplate.name} Front View`}
+            className="img-fluid shadow border border-3 front-image"
+            style={{ maxHeight: "400px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="col-12 col-sm-6 text-center px-3 px-sm-0">
+          <div className="row g-3 mb-3">
+            <div className="col-12 col-sm-6">
+                  <img
+                    src={top4Images[0]}
+                    alt={`${top4Images[0]} Interior`}
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "190px", objectFit: "cover" }}
+                  />
+            </div>
+            <div className="col-12 col-sm-6">
+                  <img
+                    src={top4Images[1]}
+                    alt={`${top4Images[1]} Interior`}
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "190px", objectFit: "cover" }}
+                  />
+            </div>
+          </div>
+          <div className="row g-3 mb-0">
+            <div className="col-12 col-sm-6">
+                  <img
+                    src={top4Images[2]}
+                    alt={`${top4Images[2]} Interior`}
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "190px", objectFit: "cover" }}
+                  />
+            </div>
+            <div className="col-12 col-sm-6">
+                  <img
+                    src={top4Images[3]}
+                    alt={`${top4Images[3]} Interior`}
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "190px", objectFit: "cover" }}
+                  />
+            </div>
+          </div>
+          
+        </div>
+        <div className="row mb-3 g-3 mt-0 px-3 px-sm-0">
+            {otherImages.map((img, idx) => (
+                  <div key={idx} className="col-12 col-sm-3 text-center px-0 px-sm-2">
+                    <img
+                      src={img}
+                      alt={`${currentTemplate.name} Interior ${idx + 1}`}
+                      className="img-fluid rounded shadow"
+                      style={{ maxHeight: "190px", objectFit: "cover" }}
+                    />
+                  </div>      
+            ))}
+        </div>
+          
+      </div>
+
+      {/* Controls */}
       <div className="d-flex justify-content-between mt-4">
-        <button
-          onClick={handlePrev}
-          className="btn btn-dark px-4"
-        >
+        <button onClick={handlePrev} className="btn btn-dark px-4">
           Prev
         </button>
-        <button
-          onClick={handleNext}
-          className="btn btn-primary px-4"
-        >
+        <button onClick={handleNext} className="btn btn-primary px-4">
           Next
         </button>
       </div>

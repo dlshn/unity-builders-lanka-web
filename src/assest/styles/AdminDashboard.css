@@ -22,10 +22,7 @@
   animation: modernBounce 3s ease-in-out infinite;
   animation-delay: 1.5s;
 }
-.c4,.card-body4 h5{
-  animation: modernBounce 3s ease-in-out infinite;
-  animation-delay: 2.25s;
-}
+
 
 
 .admin-dashboard {
@@ -34,7 +31,7 @@
   background-position: center;
   min-height: 100vh;
   background-blend-mode: overlay;
-  background-color: rgba(28, 61, 101, 0.8); /* Optional overlay */
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay */
   display: flex;
   align-items: center;
   justify-content: center;

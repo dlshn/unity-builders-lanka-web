@@ -4,7 +4,13 @@
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
-  background: linear-gradient(to bottom, #1c3d65, #375983, #7389b9);
+  
+  background-image: url("../Background_images/admin-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay */
 }
 
 .login-card {

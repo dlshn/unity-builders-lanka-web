@@ -11,12 +11,13 @@
     
   }
   
-  /* Add blurred background when scrolled */
+  /* Add blurred background when scrolled */ 
   .custom-header.scrolled {
     background: rgba(255, 255, 255, 0.1); /* Light transparency */ 
     backdrop-filter: blur(10px); /* Apply blur effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    color: #003e8a;
   }
   
   /* Logo */
@@ -38,11 +39,30 @@
   .nav-links {
     display: none;  
   }
-  .nav-links .item{
-    text-decoration: underline;
-    text-underline-offset: 4px;
-   
+    .nav-links .item {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px ;
   }
+  
+  .nav-links .item:hover {
+    color: #072b7e;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .scrolled .item{
+    color: #003e8a;
+    background-color: rgba(239, 239, 239, 0.9);
+  }
+
+  .scrolled .item:hover {
+    background-color: #072b7e;
+    color: #ffffff;
+  }
+
   /* Show menu when active  */
   .nav-links.active {
     display: flex;
@@ -72,20 +92,7 @@
     margin-top: 10px;
   }
   
-  .nav-links a {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: large;
-    text-decoration: underline;
-    transition: color 0.3s;
-    padding: 5px 10px;
-    border-radius: 5px ;
-  }
-  
-  .nav-links a:hover {
-    color: #072b7e;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+
   /* menu icon */
   .menu-icon {
     border: none;

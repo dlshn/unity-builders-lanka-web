@@ -62,7 +62,7 @@ export const Header = () => {
         </button>
 
         {/* Navigation Links */}
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <div className={`nav-links ${menuOpen ? "active" : ""} ${isScrolled ? "scrolled" : ""}`}>
           {!isLoggedIn ? (
             <Link to="/" onClick={() => setMenuOpen(false)} className="item">Home</Link>
           ) : (
@@ -70,9 +70,10 @@ export const Header = () => {
           )} 
           <Link to="/Packages" onClick={() => setMenuOpen(false)} className="item">House Packages</Link>
           <Link to="/Project" onClick={() => setMenuOpen(false)} className="item">Ongoing Projects</Link>
-          <Link to="/" onClick={() => setMenuOpen(false)} className="item">Interior 3D</Link>  {/* Interior 3D link to home page temporally*/}
-          <Link to="/About" onClick={() => setMenuOpen(false)} className="item">About Us</Link>
-          <Link to="/Contact" onClick={() => setMenuOpen(false)} className="item">Contact Us</Link>
+          <Link to="/Interior_3D" onClick={() => setMenuOpen(false)} className="item">Interior 3D</Link>  {/* Interior 3D link to home page temporally*/}
+          {!isLoggedIn && <Link to="/About" onClick={() => setMenuOpen(false)} className="item">About Us</Link> }
+          {!isLoggedIn && <Link to="/Contact" onClick={() => setMenuOpen(false)} className="item">Contact Us</Link> }
+          
           {isLoggedIn && (
             <button
               onClick={handleLogout}
