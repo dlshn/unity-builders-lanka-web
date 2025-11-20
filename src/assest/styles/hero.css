@@ -7,9 +7,15 @@
 
 }
 
+.sinhala-font {
+  font-family: "Noto Sans Sinhala", sans-serif;
+  font-weight: 500;
+}
+
+
   .hero {
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 100px 20px;
     display: flex;
@@ -119,7 +125,7 @@
 @media (max-width: 480px){
   .container-fluid{
     padding: auto 0;
-    margin-top: 100px;
+    
   }
     .hero-logo{
     height: 300px;
