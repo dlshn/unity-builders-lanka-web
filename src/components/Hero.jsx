@@ -9,7 +9,10 @@ export const Hero = () => {
 
     <section className="hero d-flex align-items-center">
       <div className="container-fluid text-center px-0">
-        <img src={logo} alt="Unity Builders Lanka logo " className="hero-logo mt-0" data-aos="flip-left" />
+        <div className="alert alert-success mb-4 mt-5 fs-5 py-2 py-sm-3" role="alert">
+          දැන් කුරුණෑගල අවට ඔබටත් <strong>Unity Builders Lanka</strong> හරහා සේවාවන් ලබාගත හැක. <strong><a href="tel:+94 719460945" className="text-dark"> 0719460945</a></strong>
+        </div>
+        <img src={logo} alt="Unity Builders Lanka logo" className="hero-logo mt-0" data-aos="flip-left" />
         <h1 className="hero-heading">
 
           <Typewriter
