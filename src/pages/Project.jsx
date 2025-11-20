@@ -64,7 +64,7 @@ export const Project = () => {
       <h6 className="text-light text-center mx-4 mb-4">
           These are only a few highlights from our many ongoing projects.
       </h6>
-      {!projects.length ? (<p className="text-center text-white">No Ongoing Projects found.</p>):""}
+      {!projects.length && !loading ? (<p className="text-center text-white">No Ongoing Projects found.</p>):""}
       <div className="container">
         <div className="row g-4 d-flex align-items-center justify-content-between">
           { loading ? (
