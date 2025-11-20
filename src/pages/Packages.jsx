@@ -70,7 +70,6 @@ export const Packages = () => {
     setVisibleCount((prev) => prev + 6);
   };
 
-
   return (
     <>
       <section className="packages">
@@ -78,6 +77,7 @@ export const Packages = () => {
         <h6 className="text-light text-center mx-4 mb-4">
           These designs are fully customizable to meet your specific needs.
         </h6>
+        {!packageData.length ? (<p className="text-center text-white">No House Packages found.</p>):""}
         <div className="container">
           <div className="content grid3">
             {loading ? (

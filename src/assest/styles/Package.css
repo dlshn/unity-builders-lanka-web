@@ -4,10 +4,11 @@
 .packages {
   position: relative;
   height: auto;   
+  min-height: 100vh;
   padding: 100px 20px;
   background: url("../Background_images/packages/1.jpg") center/cover no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment:scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,8 +226,10 @@
   margin: 10px auto;
 }
 .modal-btn:hover{
-  color: var(--primaryColor);
-  background: var(--greyDark);
+  background: white;
+  color: #003e8a;
+  border: #003e8a 2px solid;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive for mobile screens */
