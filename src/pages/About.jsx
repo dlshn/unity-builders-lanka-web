@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import image_left from "../assest/about-left.jpg";
+import image_left from "../assest/Background_images/about/about-left.png";
 import { Heading } from "../components/Heading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assest/styles/about.css";
