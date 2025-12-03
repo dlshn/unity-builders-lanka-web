@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import InteriorTemplate from '../components/InteriorTemplate';
 import bgImage from '../assest/Background_images/Interior/bg1.jpg';
 import { Heading } from '../components/Heading';
 
 const Interior = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   return (
     <div
