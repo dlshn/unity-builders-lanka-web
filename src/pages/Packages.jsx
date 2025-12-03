@@ -96,7 +96,7 @@ export const Packages = () => {
                   <div className="text">
                     <h3>{pkg.title}</h3>
                     <p style={{ fontFamily: "Merriweather, serif", color:"#001c3fff" }}>{pkg.description}</p>
-                    {/* <h4 className="price">Rs. - lacks</h4> */}
+                    <h4 className="price">Rs. - lacks</h4>
                     <div className="d-flex flex-column align-items-center gap-3 mt-3">
                       {/* View Details Button */}
                       <button className="package-btn" onClick={() => openModal(pkg)}>
