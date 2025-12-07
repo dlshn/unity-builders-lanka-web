@@ -92,6 +92,7 @@ export const Packages = () => {
                 <div className="box" data-aos="zoom-in" key={pkg._id}>
                   <div className="img">
                     <img src={pkg.urls[0]} alt={pkg.title} />
+                    <span className="special-discount-label">Special Discount</span>
                   </div>
                   <div className="text">
                     <h3>{pkg.title}</h3>
