@@ -103,9 +103,9 @@ export const Project = () => {
                 </div>
                 <div class="d-flex justify-content-between gap-3 align-items-center  mx-3 mb-2" >
 
-                  <a href={item.location} type="button" className="location-btn btn" >
+                  {/* <a href={item.location} type="button" className="location-btn btn" >
                     Location
-                  </a>
+                  </a> */}
 
                   <h6 className="updated-date">
                     Last Update: {new Date(item.updatedAt).toLocaleDateString()}
